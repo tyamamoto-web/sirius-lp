@@ -177,24 +177,20 @@
   .task svg{width:20px;height:20px;color:var(--gold-2);flex-shrink:0;}
   .task.more{color:var(--slate);font-size:.85rem;}
 
-  /* loss calc (recognition) */
-  .loss{margin:36px auto 0;max-width:36em;}
-  .loss-lead{font-size:.98rem;color:var(--on);font-weight:300;margin-bottom:20px;}
-  .loss-chain{display:flex;align-items:stretch;justify-content:center;gap:8px;}
-  .lc{flex:1 1 0;min-width:0;display:flex;flex-direction:column;justify-content:center;gap:6px;padding:18px 10px;border:1px solid var(--line-b);border-radius:12px;background:rgba(12,27,51,.4);backdrop-filter:blur(4px);text-align:center;}
-  .lc.hl{border-color:var(--line-d);background:rgba(227,194,114,.08);box-shadow:0 0 30px rgba(227,194,114,.12);}
-  .lc-n{font-weight:700;color:#fff;font-size:clamp(1.1rem,3.6vw,1.5rem);letter-spacing:.01em;line-height:1.2;}
-  .lc.hl .lc-n{color:var(--gold-2);text-shadow:0 0 22px rgba(227,194,114,.35);}
-  .lc-n span{font-size:.66em;font-weight:500;margin-left:1px;}
-  .lc-l{font-size:.72rem;color:var(--slate);line-height:1.45;}
-  .lc-op{display:flex;align-items:center;justify-content:center;color:var(--gold-2);font-weight:700;flex:0 0 16px;font-size:1.05rem;}
+  /* loss calc + accumulation chart (recognition) */
+  .loss{margin:34px auto 0;max-width:38em;}
+  .loss-lead{font-size:1.06rem;color:var(--on);font-weight:300;line-height:1.7;margin-bottom:4px;}
+  .loss-lead b{color:var(--gold-2);font-weight:700;}
+  .lossfig{display:block;width:100%;max-width:540px;height:auto;margin:12px auto 2px;}
+  .lossfig text{font-family:"Noto Sans JP",sans-serif;}
+  .lossfig .v{fill:#fff;font-weight:700;font-size:18px;}
+  .lossfig .v.hl{fill:var(--gold-2);font-size:24px;animation:lossglow 2.8s ease-in-out infinite;}
+  .lossfig .y{fill:var(--slate);font-size:14px;}
+  .lossfig .cap{fill:var(--slate);font-size:13px;letter-spacing:.04em;}
+  @keyframes lossglow{0%,100%{opacity:.82}50%{opacity:1}}
+  .loss-cap{font-size:.92rem;color:var(--slate);line-height:1.65;margin-top:6px;}
+  .loss-cap b{color:var(--gold-2);font-weight:700;}
   .loss-src{font-size:.7rem;color:#6f7d95;margin-top:14px;line-height:1.55;}
-  @media(max-width:560px){
-    .loss-chain{flex-direction:column;gap:6px;}
-    .lc{flex-direction:row;justify-content:space-between;align-items:center;text-align:left;padding:14px 18px;}
-    .lc-l{text-align:right;}
-    .lc-op{flex:0 0 auto;padding:1px 0;transform:rotate(90deg);}
-  }
 
   @media(max-width:680px){
     .flow{flex-direction:column;align-items:stretch;gap:8px;}
@@ -235,6 +231,7 @@
   @media(prefers-reduced-motion:reduce){
     .reveal{opacity:1;transform:none;transition:none}
     .badge .dot{animation:none}
+    .lossfig .v.hl{animation:none}
     html{scroll-behavior:auto}
   }
 </style>
@@ -283,14 +280,25 @@
     </div>
     <p class="desc">担当の決まっていない小さな業務は、いつの間にか経営者の手元に積み上がります。本来は事業の成長に充てるべき時間が、そこで失われていきます。</p>
     <div class="loss">
-      <p class="loss-lead">その失われる時間を、試算してみます。</p>
-      <div class="loss-chain">
-        <div class="lc"><div class="lc-n">週5<span>時間</span></div><div class="lc-l">非コア業務に<br>充てると（仮定）</div></div>
-        <div class="lc-op">→</div>
-        <div class="lc"><div class="lc-n">年260<span>時間</span></div><div class="lc-l">約1.5ヶ月分の<br>労働日に相当</div></div>
-        <div class="lc-op">→</div>
-        <div class="lc hl"><div class="lc-n">約149<span>万円</span></div><div class="lc-l">分の時間が<br>本業以外に</div></div>
-      </div>
+      <p class="loss-lead">週5時間を非コア業務に充てると仮定すると、その積み重ねは<b>毎月およそ12.4万円</b>の見えないコストになります。</p>
+      <svg class="lossfig" viewBox="0 0 600 268" role="img" aria-label="放置した場合の累積損失の試算。1年で約149万円、3年で約447万円、5年で約745万円。">
+        <defs>
+          <linearGradient id="lbg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6aa0ff" stop-opacity=".5"/><stop offset="1" stop-color="#6aa0ff" stop-opacity=".07"/></linearGradient>
+          <linearGradient id="lbh" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E3C272" stop-opacity=".95"/><stop offset="1" stop-color="#E3C272" stop-opacity=".14"/></linearGradient>
+        </defs>
+        <text class="cap" x="56" y="20" text-anchor="start">放置した場合の累積損失（試算）</text>
+        <line x1="56" y1="216" x2="544" y2="216" stroke="rgba(120,160,230,.22)" stroke-width="1"/>
+        <rect x="108" y="180" width="84" height="36" rx="6" fill="url(#lbg)"/>
+        <text class="v" x="150" y="170" text-anchor="middle">約149万円</text>
+        <text class="y" x="150" y="240" text-anchor="middle">1年</text>
+        <rect x="258" y="108" width="84" height="108" rx="6" fill="url(#lbg)"/>
+        <text class="v" x="300" y="98" text-anchor="middle">約447万円</text>
+        <text class="y" x="300" y="240" text-anchor="middle">3年</text>
+        <rect x="408" y="36" width="84" height="180" rx="6" fill="url(#lbh)"/>
+        <text class="v hl" x="450" y="26" text-anchor="middle">約745万円</text>
+        <text class="y" x="450" y="240" text-anchor="middle">5年</text>
+      </svg>
+      <p class="loss-cap">放置すれば、損失は積み上がります。年間で<b>約149万円</b>、5年では<b>約745万円</b>に。</p>
       <p class="loss-src">※前提：経営者が総務等の非コア業務を兼務（中小企業庁「小規模企業白書」）。週5時間と仮定した試算。時間単価＝時間当たり労働生産性5,720円／時（日本生産性本部「労働生産性の国際比較2025」）。</p>
     </div>
     <div class="stat">
