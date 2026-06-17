@@ -137,7 +137,8 @@
   footer .co{font-size:.76rem;margin-top:8px;color:var(--slate)}
   footer .cp{font-family:"Space Grotesk",sans-serif;font-size:.72rem;margin-top:16px;color:#5C6675;letter-spacing:.04em}
 
-  .sticky-cta{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(6,15,31,.94);backdrop-filter:blur(8px);border-top:1px solid var(--line-d);padding:11px 16px;}
+  .sticky-cta{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(6,15,31,.94);backdrop-filter:blur(8px);border-top:1px solid var(--line-d);padding:11px 16px;transition:transform .3s ease;}
+  .sticky-cta.hide{transform:translateY(120%);}
   .sticky-cta a{display:block;text-align:center;background:linear-gradient(180deg,var(--gold-2),var(--gold));color:var(--ink);font-weight:500;font-size:.96rem;padding:14px;border-radius:4px;text-decoration:none;box-shadow:0 0 20px rgba(227,194,114,.3)}
 
   .reveal{opacity:0;transform:translateY(16px);transition:opacity .8s ease,transform .8s ease}
@@ -157,11 +158,36 @@
   table.cmp thead .col-s{color:var(--gold-2);text-shadow:0 0 16px rgba(227,194,114,.35);}
   table.cmp td.col-s{color:#fff;font-weight:500;}
   table.cmp tbody tr:last-child th,table.cmp tbody tr:last-child td{border-bottom:none;}
+  .cmp-hint{display:none;text-align:center;font-size:.8rem;color:var(--slate);margin-top:12px;}
 
   @media(max-width:760px){
     .sticky-cta{display:block}
     footer.site .wrap{padding-bottom:84px}
     .grid{background-size:48px 48px}
+
+    /* 縦の余白を詰めて間延びを防ぐ */
+    .hero .wrap{padding:58px 22px 70px}
+    .recog .wrap,.shift .wrap,.loop .wrap,.cmp-sec .wrap{padding:58px 22px}
+    .cta .wrap{padding:20px 20px 88px}
+
+    /* 見出し：縮小＋CJK折り返し許可で画面外あふれを防止 */
+    .hero h1{font-size:1.7rem;line-height:1.42;word-break:normal}
+    .recog .big{font-size:1.5rem;line-height:1.5;word-break:normal}
+    .shift h2{font-size:1.65rem}
+    .loop h2{font-size:1.45rem}
+    .cmp-sec h2{font-size:1.45rem;word-break:normal}
+    .hero .sub{font-size:1.02rem}
+
+    /* フォーム：入力16px以上でiOSのフォーカス時ズームを防ぐ／余白調整 */
+    form.reg{padding:30px 20px}
+    .reg input,.reg select{font-size:16px}
+    .reg .ftitle .t{font-size:1.35rem}
+
+    /* 比較表：コンパクト化＋横スクロールの誘導を表示 */
+    table.cmp{min-width:500px}
+    table.cmp th,table.cmp td{padding:13px 12px;font-size:.85rem}
+    table.cmp tbody th{font-size:.78rem}
+    .cmp-hint{display:block}
   }
   @media(prefers-reduced-motion:reduce){
     .reveal{opacity:1;transform:none;transition:none}
@@ -250,6 +276,7 @@
         </tbody>
       </table>
     </div>
+    <p class="cmp-hint">← 横スクロールで全体を表示 →</p>
   </div>
 </section>
 
@@ -382,6 +409,16 @@
   });
   const io=new IntersectionObserver((es)=>{es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:0.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  /* スマホ：フォームが画面に入ったら下部固定CTAを隠す（重なり防止） */
+  (function(){
+    const sticky=document.querySelector('.sticky-cta');
+    const reg=document.getElementById('register');
+    if(sticky&&reg&&'IntersectionObserver' in window){
+      const so=new IntersectionObserver((es)=>{es.forEach(en=>{ sticky.classList.toggle('hide', en.isIntersecting); });},{threshold:0.15});
+      so.observe(reg);
+    }
+  })();
 </script>
 </body>
 </html>
