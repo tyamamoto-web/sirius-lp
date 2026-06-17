@@ -266,13 +266,13 @@
     <div class="cmp-wrap">
       <table class="cmp">
         <thead>
-          <tr><th></th><th>採用（正社員）</th><th>一般的な外注</th><th class="col-s">SIRIUS</th></tr>
+          <tr><th></th><th class="col-s">SIRIUS</th><th>採用（正社員）</th><th>一般的な外注</th></tr>
         </thead>
         <tbody>
-          <tr><th>コスト</th><td>月数十万円の固定費</td><td>月額・最低契約</td><td class="col-s">固定費なし・使った分だけ</td></tr>
-          <tr><th>契約の縛り</th><td>雇用責任</td><td>最低利用期間あり</td><td class="col-s">縛りなし・いつでも解約</td></tr>
-          <tr><th>立ち上がり</th><td>採用に数ヶ月・ミスマッチ</td><td>業務範囲の調整が必要</td><td class="col-s">採用不要・すぐ対応</td></tr>
-          <tr><th>スキル</th><td>担当者一人に依存</td><td>依頼範囲が固定的</td><td class="col-s">AIが最適スキルをマッチング</td></tr>
+          <tr><th>コスト</th><td class="col-s">固定費なし・使った分だけ</td><td>月数十万円の固定費</td><td>月額・最低契約</td></tr>
+          <tr><th>契約の縛り</th><td class="col-s">縛りなし・いつでも解約</td><td>雇用責任</td><td>最低利用期間あり</td></tr>
+          <tr><th>立ち上がり</th><td class="col-s">採用不要・すぐ対応</td><td>採用に数ヶ月・ミスマッチ</td><td>業務範囲の調整が必要</td></tr>
+          <tr><th>スキル</th><td class="col-s">AIが最適スキルをマッチング</td><td>担当者一人に依存</td><td>依頼範囲が固定的</td></tr>
         </tbody>
       </table>
     </div>
@@ -357,17 +357,27 @@
     const cv=document.getElementById('net'); if(!cv) return;
     const ctx=cv.getContext('2d');
     const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    let W,H,DPR,nodes,raf;
+    let W,H,DPR,nodes,raf,sCur=0;
     function size(){ DPR=Math.min(window.devicePixelRatio||1,2); W=cv.width=innerWidth*DPR; H=cv.height=innerHeight*DPR; cv.style.width=innerWidth+'px'; cv.style.height=innerHeight+'px'; }
     function init(){ const n=Math.max(28,Math.min(64,Math.floor(innerWidth/24))); nodes=[]; for(let i=0;i<n;i++){ nodes.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*0.10*DPR,vy:(Math.random()-.5)*0.10*DPR,r:(Math.random()*1.5+0.6)*DPR}); } }
-    function frame(){
-      ctx.clearRect(0,0,W,H);
+    function drawScene(){
       const maxd=150*DPR;
-      for(let i=0;i<nodes.length;i++){ const a=nodes[i]; a.x+=a.vx; a.y+=a.vy;
-        if(a.x<0||a.x>W)a.vx*=-1; if(a.y<0||a.y>H)a.vy*=-1;
+      for(let i=0;i<nodes.length;i++){ const a=nodes[i];
         for(let j=i+1;j<nodes.length;j++){ const b=nodes[j]; const dx=a.x-b.x,dy=a.y-b.y; const d=Math.hypot(dx,dy);
           if(d<maxd){ const o=(1-d/maxd)*0.16; ctx.strokeStyle='rgba(150,180,235,'+o+')'; ctx.lineWidth=1*DPR; ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke(); } } }
       for(const p of nodes){ ctx.beginPath(); ctx.fillStyle='rgba(227,194,114,.8)'; ctx.shadowColor='rgba(227,194,114,.6)'; ctx.shadowBlur=8*DPR; ctx.arc(p.x,p.y,p.r,0,Math.PI*2); ctx.fill(); ctx.shadowBlur=0; }
+    }
+    function frame(){
+      for(let i=0;i<nodes.length;i++){ const a=nodes[i]; a.x+=a.vx; a.y+=a.vy; if(a.x<0||a.x>W)a.vx*=-1; if(a.y<0||a.y>H)a.vy*=-1; }
+      /* スクロール量に緩やかに追従させ、星座をぬるぬるパララックスさせる */
+      const sTarget=(window.pageYOffset||0)*DPR;
+      sCur+=(sTarget-sCur)*0.08;
+      const off=((sCur*0.18)%H+H)%H;
+      ctx.clearRect(0,0,W,H);
+      ctx.save();
+      ctx.translate(0,off); drawScene();
+      ctx.translate(0,-H); drawScene();
+      ctx.restore();
       raf=requestAnimationFrame(frame);
     }
     function start(){ size(); init(); if(reduce){ frame(); cancelAnimationFrame(raf); } else { cancelAnimationFrame(raf); frame(); } }
