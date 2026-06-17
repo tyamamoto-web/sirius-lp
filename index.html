@@ -294,18 +294,35 @@
     start();
   })();
 
-  /* フォーム送信先（要設定）：HubSpotフォーム等のURLを設定 */
-  const FORM_ENDPOINT = "";
+  /* フォーム送信先：HubSpot Forms（ポータル 47984130 / フォーム ba1ce738… / region na1） */
+  const HS_PORTAL_ID = "47984130";
+  const HS_FORM_GUID = "ba1ce738-6e43-462e-8847-c3687e090498";
+  const HS_ENDPOINT = "https://api.hsforms.com/submissions/v3/integration/submit/" + HS_PORTAL_ID + "/" + HS_FORM_GUID;
   const form=document.getElementById('regForm');
   const done=document.getElementById('regDone');
+  const submitBtn=form.querySelector('.submit');
   form.addEventListener('submit', async function(e){
     e.preventDefault();
     if(!form.checkValidity()){ form.reportValidity(); return; }
     const data=Object.fromEntries(new FormData(form).entries());
+    const fields=[{name:'email',value:(data.email||'').trim()}];
+    if(data.company && data.company.trim()){ fields.push({name:'company',value:data.company.trim()}); }
+    const m=document.cookie.match(/hubspotutk=([^;]+)/);
+    const payload={
+      fields:fields,
+      context:Object.assign({pageUri:location.href,pageName:document.title}, m?{hutk:m[1]}:{})
+    };
+    const orig=submitBtn.textContent;
+    submitBtn.disabled=true; submitBtn.textContent='送信中…';
     try{
-      if(FORM_ENDPOINT){ await fetch(FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)}); }
-      else{ console.log('[SIRIUS pre-register]', data); }
-    }catch(err){ console.error('送信に失敗しました', err); }
+      const res=await fetch(HS_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+      if(!res.ok){ throw new Error('HubSpot '+res.status); }
+    }catch(err){
+      console.error('送信に失敗しました', err);
+      submitBtn.disabled=false; submitBtn.textContent=orig;
+      alert('送信に失敗しました。通信環境をご確認のうえ、もう一度お試しください。');
+      return;
+    }
     form.style.display='none'; done.classList.add('show');
     done.scrollIntoView({behavior:'smooth',block:'center'});
   });
