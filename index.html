@@ -160,6 +160,30 @@
   table.cmp tbody tr:last-child th,table.cmp tbody tr:last-child td{border-bottom:none;}
   .cmp-hint{display:none;text-align:center;font-size:.8rem;color:var(--slate);margin-top:12px;}
 
+  /* mechanism flow (shift) */
+  .flow{display:flex;align-items:stretch;justify-content:center;gap:10px;margin:6px 0 36px;}
+  .flow-step{flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;gap:12px;padding:22px 12px;border:1px solid var(--line-b);border-radius:14px;background:rgba(12,27,51,.4);backdrop-filter:blur(4px);text-align:center;}
+  .flow-step.hl{border-color:var(--line-d);background:rgba(227,194,114,.08);box-shadow:0 0 34px rgba(227,194,114,.12);}
+  .flow-ic{width:48px;height:48px;display:flex;align-items:center;justify-content:center;border-radius:13px;background:rgba(96,150,230,.10);color:var(--gold-2);}
+  .flow-step.hl .flow-ic{background:rgba(227,194,114,.14);}
+  .flow-ic svg{width:26px;height:26px;}
+  .flow-t{font-size:.86rem;font-weight:500;color:#fff;line-height:1.45;}
+  .flow-arrow{display:flex;align-items:center;justify-content:center;color:var(--gold-2);flex:0 0 22px;}
+  .flow-arrow svg{width:22px;height:22px;}
+
+  /* problem task chips (recognition) */
+  .tasks{display:flex;justify-content:center;flex-wrap:wrap;gap:10px 12px;margin:26px 0 22px;}
+  .task{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line-b);border-radius:10px;padding:11px 16px;font-size:.9rem;color:#fff;background:rgba(12,27,51,.4);backdrop-filter:blur(4px);}
+  .task svg{width:20px;height:20px;color:var(--gold-2);flex-shrink:0;}
+  .task.more{color:var(--slate);font-size:.85rem;}
+
+  @media(max-width:680px){
+    .flow{flex-direction:column;align-items:stretch;gap:8px;}
+    .flow-step{flex-direction:row;justify-content:flex-start;text-align:left;gap:14px;padding:15px 18px;}
+    .flow-step .flow-t br{display:none;}
+    .flow-arrow{flex:0 0 auto;padding:2px 0;transform:rotate(90deg);}
+  }
+
   @media(max-width:760px){
     .sticky-cta{display:block}
     footer.site .wrap{padding-bottom:84px}
@@ -232,7 +256,13 @@
   <div class="wrap reveal">
     <p class="lbl eyebrow">経営者の、見えない負担</p>
     <p class="big">これは、誰の仕事でしょうか。</p>
-    <p class="desc">入社手続き、備品の発注、契約書の確認。担当の決まっていない小さな業務は、いつの間にか経営者の手元に積み上がります。本来は事業の成長に充てるべき時間が、そこで失われていきます。</p>
+    <div class="tasks">
+      <div class="task"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M5.5 16.3c.7-1.6 2-2.4 3.5-2.4s2.8.8 3.5 2.4"/><path d="M15 9.5h4M15 13h4"/></svg><span>入社手続き</span></div>
+      <div class="task"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg><span>備品の発注</span></div>
+      <div class="task"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5z"/><path d="M14 3v5h5"/><path d="M9 14l2 2 4-4"/></svg><span>契約書の確認</span></div>
+      <div class="task more">ほか多数…</div>
+    </div>
+    <p class="desc">担当の決まっていない小さな業務は、いつの間にか経営者の手元に積み上がります。本来は事業の成長に充てるべき時間が、そこで失われていきます。</p>
     <div class="stat">
       <div class="n">2社に1社が、人手不足を実感しています</div>
       <div class="t">正社員が不足と感じる企業は53.4%。出典：帝国データバンク（2025年）</div>
@@ -247,7 +277,28 @@
   <div class="wrap reveal">
     <p class="lbl eyebrow">採用に代わる、新しい選択肢</p>
     <h2>採用せずに、<br><span class="u">総務</span>が回る。</h2>
-    <p class="sub"><b>SIRIUSは、業務をAIが最小単位に分解し、それぞれに最適なスキルを持つ人材を割り当てます。</b>人を採用することなく、必要な業務だけを、必要な分だけ任せられます。</p>
+    <p class="sub">業務をAIが分解し、最適なスキルを持つ人材が対応します。</p>
+    <div class="flow">
+      <div class="flow-step">
+        <div class="flow-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 12l9 5 9-5"/><path d="M3 16l9 5 9-5"/></svg></div>
+        <div class="flow-t">バラバラの<br>総務業務</div>
+      </div>
+      <div class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <div class="flow-step">
+        <div class="flow-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
+        <div class="flow-t">AIが最小単位に<br>分解</div>
+      </div>
+      <div class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <div class="flow-step">
+        <div class="flow-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="12" cy="18" r="2"/><path d="M6.5 7.5l4.5 9M17.5 7.5l-4.5 9M7 6h10"/></svg></div>
+        <div class="flow-t">スキルで<br>マッチング</div>
+      </div>
+      <div class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <div class="flow-step hl">
+        <div class="flow-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="8" r="3.2"/><path d="M4 20c0-3.3 2.7-6 6-6 1.1 0 2.2.3 3.1.85"/><path d="M15 18.5l2 2 3.5-4"/></svg></div>
+        <div class="flow-t">最適な人材が<br>代行</div>
+      </div>
+    </div>
     <div class="triad">
       <span>AIによるスキルマッチング</span>
       <span>採用せず、即戦力</span>
