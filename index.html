@@ -143,6 +143,21 @@
   .reveal{opacity:0;transform:translateY(16px);transition:opacity .8s ease,transform .8s ease}
   .reveal.in{opacity:1;transform:none}
 
+  /* comparison */
+  .cmp-sec .wrap{padding:92px 24px;}
+  .cmp-sec .lbl{margin-bottom:22px;text-align:center;}
+  .cmp-sec h2{font-weight:900;color:#fff;font-size:clamp(1.6rem,4.2vw,2.5rem);line-height:1.42;margin-bottom:34px;text-align:center;letter-spacing:.01em;word-break:keep-all;}
+  .cmp-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:12px;border:1px solid var(--line-b);background:rgba(12,27,51,.35);backdrop-filter:blur(4px);}
+  table.cmp{width:100%;min-width:580px;border-collapse:separate;border-spacing:0;}
+  table.cmp th,table.cmp td{padding:15px 16px;text-align:left;font-size:.9rem;border-bottom:1px solid var(--line-b);vertical-align:top;line-height:1.5;}
+  table.cmp thead th{font-weight:700;color:#fff;font-size:.92rem;border-bottom:1px solid var(--line-d);}
+  table.cmp tbody th{font-weight:500;color:var(--slate);font-size:.82rem;white-space:nowrap;}
+  table.cmp td{color:var(--slate);}
+  table.cmp .col-s{background:rgba(227,194,114,.07);}
+  table.cmp thead .col-s{color:var(--gold-2);text-shadow:0 0 16px rgba(227,194,114,.35);}
+  table.cmp td.col-s{color:#fff;font-weight:500;}
+  table.cmp tbody tr:last-child th,table.cmp tbody tr:last-child td{border-bottom:none;}
+
   @media(max-width:760px){
     .sticky-cta{display:block}
     footer.site .wrap{padding-bottom:84px}
@@ -211,6 +226,29 @@
       <span>AIによるスキルマッチング</span>
       <span>採用せず、即戦力</span>
       <span>属人化の解消</span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- COMPARE -->
+<section class="cmp-sec">
+  <div class="wrap reveal">
+    <p class="lbl eyebrow">他の選択肢との違い</p>
+    <h2>採用とも、これまでの外注とも違います。</h2>
+    <div class="cmp-wrap">
+      <table class="cmp">
+        <thead>
+          <tr><th></th><th>採用（正社員）</th><th>一般的な外注</th><th class="col-s">SIRIUS</th></tr>
+        </thead>
+        <tbody>
+          <tr><th>コスト</th><td>月数十万円の固定費</td><td>月額・最低契約</td><td class="col-s">固定費なし・使った分だけ</td></tr>
+          <tr><th>契約の縛り</th><td>雇用責任</td><td>最低利用期間あり</td><td class="col-s">縛りなし・いつでも解約</td></tr>
+          <tr><th>立ち上がり</th><td>採用に数ヶ月・ミスマッチ</td><td>業務範囲の調整が必要</td><td class="col-s">採用不要・すぐ対応</td></tr>
+          <tr><th>スキル</th><td>担当者一人に依存</td><td>依頼範囲が固定的</td><td class="col-s">AIが最適スキルをマッチング</td></tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </section>
