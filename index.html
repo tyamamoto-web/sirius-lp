@@ -389,6 +389,7 @@
           <select id="size" name="size"><option value="">選択してください</option><option>1〜9名</option><option>10〜50名</option><option>51〜100名</option><option>101名以上</option></select>
         </div>
         <div class="fg consent"><input type="checkbox" id="consent" name="consent" required /><label for="consent" style="font-weight:400;margin:0;">先行案内の受け取りに同意します。<span class="req">必須</span></label></div>
+        <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none" />
         <button type="submit" class="submit">無料で先行登録する</button>
         <p class="fine">ご登録はメールアドレスのみ、1分で完了します。しつこい営業のご連絡はいたしません。いただいた情報は、ご案内以外の目的には利用いたしません。</p>
       </form>
@@ -467,29 +468,39 @@
     start();
   })();
 
-  /* フォーム送信先：HubSpot Forms（ポータル 47984130 / フォーム ba1ce738… / region na1） */
-  const HS_PORTAL_ID = "47984130";
-  const HS_FORM_GUID = "ba1ce738-6e43-462e-8847-c3687e090498";
-  const HS_ENDPOINT = "https://api.hsforms.com/submissions/v3/integration/submit/" + HS_PORTAL_ID + "/" + HS_FORM_GUID;
+  /* 先行登録フォーム → Web3Forms（メール通知）。会社名・従業員数も送信メールに載る。 */
+  const W3F_KEY = "be69f24c-92b3-4d68-b7de-022c53e79158"; // 公開可（送信をメールに届ける宛先ID。秘密鍵ではない）
+  const W3F_ENDPOINT = "https://api.web3forms.com/submit";
   const form=document.getElementById('regForm');
   const done=document.getElementById('regDone');
   const submitBtn=form.querySelector('.submit');
+  function qp(n){ try{ return new URLSearchParams(location.search).get(n) || ''; }catch(e){ return ''; } }
   form.addEventListener('submit', async function(e){
     e.preventDefault();
     if(!form.checkValidity()){ form.reportValidity(); return; }
     const data=Object.fromEntries(new FormData(form).entries());
-    const fields=[{name:'email',value:(data.email||'').trim()}];
-    if(data.company && data.company.trim()){ fields.push({name:'company',value:data.company.trim()}); }
-    const m=document.cookie.match(/hubspotutk=([^;]+)/);
+    const email=(data.email||'').trim();
+    const company=(data.company||'').trim();
+    const size=(data.size||'').trim();
     const payload={
-      fields:fields,
-      context:Object.assign({pageUri:location.href,pageName:document.title}, m?{hutk:m[1]}:{})
+      access_key:W3F_KEY,
+      subject:"【SIRIUS先行登録】"+(company||email),
+      from_name:"SIRIUS 先行登録フォーム",
+      replyto:email,
+      botcheck:!!(form.botcheck&&form.botcheck.checked),
+      "メールアドレス":email,
+      "会社名":company||"（未入力）",
+      "従業員数":size||"（未選択）",
+      "同意":"あり",
+      "ページURL":location.href,
+      "流入元":qp('utm_source')||document.referrer||"（直接/不明）"
     };
     const orig=submitBtn.textContent;
     submitBtn.disabled=true; submitBtn.textContent='送信中…';
     try{
-      const res=await fetch(HS_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
-      if(!res.ok){ throw new Error('HubSpot '+res.status); }
+      const res=await fetch(W3F_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(payload)});
+      const out=await res.json().catch(()=>({}));
+      if(!res.ok || !out.success){ throw new Error('Web3Forms '+(out.message||res.status)); }
     }catch(err){
       console.error('送信に失敗しました', err);
       submitBtn.disabled=false; submitBtn.textContent=orig;
