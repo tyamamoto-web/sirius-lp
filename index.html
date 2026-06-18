@@ -141,6 +141,12 @@
   .reg input:focus,.reg select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,162,79,.14)}
   .reg .consent{display:flex;gap:10px;align-items:flex-start;font-size:.78rem;color:#5C6675;line-height:1.6;}
   .reg .consent input{width:auto;margin-top:3px;flex-shrink:0}
+  .reg .opthint{font-size:.76rem;color:#8A94A3;margin:-4px 0 14px;line-height:1.5}
+  .reg .checks{display:flex;flex-wrap:wrap;gap:8px;margin-top:2px}
+  .reg .checks label{display:inline-flex;align-items:center;gap:7px;font-size:.82rem;font-weight:400;margin:0;color:#22303f;border:1px solid #E2E6EB;border-radius:7px;padding:9px 13px;cursor:pointer;background:#fbfcfe;transition:.15s}
+  .reg .checks input{width:auto;margin:0;flex-shrink:0}
+  .reg .checks label:hover{border-color:#c9ccd2}
+  .reg .checks label:has(input:checked){border-color:#0C1B33;background:#eef2f8;font-weight:500}
   .reg .submit{width:100%;background:linear-gradient(180deg,#13294A,#0C1B33);color:#fff;font-weight:500;font-size:1.04rem;padding:17px;border-radius:5px;margin-top:8px;transition:.2s;cursor:pointer;border:none;font-family:inherit;}
   .reg .submit:hover{filter:brightness(1.15)}
   .reg .submit:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
@@ -384,14 +390,31 @@
           <div class="s">モニター枠は毎月10社まで。ご登録いただいた方から、順にご案内します。この時点で、費用や契約は発生しません。</div>
         </div>
         <div class="fg"><label for="email">メールアドレス<span class="req">必須</span></label><input type="email" id="email" name="email" autocomplete="email" required /></div>
+        <p class="opthint">以下は任意です。分かる範囲でけっこうです（メールアドレスだけでも登録できます）。</p>
+        <div class="fg"><label for="name">お名前（任意）</label><input type="text" id="name" name="name" autocomplete="name" placeholder="例：山田 太郎" /></div>
         <div class="fg"><label for="company">会社名（任意）</label><input type="text" id="company" name="company" autocomplete="organization" /></div>
+        <div class="fg"><label for="phone">電話番号（任意）</label><input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="例：03-1234-5678" /></div>
         <div class="fg"><label for="size">従業員数（任意）</label>
           <select id="size" name="size"><option value="">選択してください</option><option>1〜9名</option><option>10〜50名</option><option>51〜100名</option><option>101名以上</option></select>
+        </div>
+        <div class="fg"><label for="timing">導入をご検討の時期（任意）</label>
+          <select id="timing" name="timing"><option value="">選択してください</option><option>すぐにでも</option><option>1〜3ヶ月以内</option><option>半年以内</option><option>情報収集中</option></select>
+        </div>
+        <div class="fg"><label>依頼を検討中の業務（任意・複数選択可）</label>
+          <div class="checks">
+            <label><input type="checkbox" name="tasks" value="入社・退社の手続き" />入社・退社の手続き</label>
+            <label><input type="checkbox" name="tasks" value="備品・消耗品の発注" />備品・消耗品の発注</label>
+            <label><input type="checkbox" name="tasks" value="契約書の確認・管理" />契約書の確認・管理</label>
+            <label><input type="checkbox" name="tasks" value="請求・経費の処理" />請求・経費の処理</label>
+            <label><input type="checkbox" name="tasks" value="勤怠・労務" />勤怠・労務</label>
+            <label><input type="checkbox" name="tasks" value="問い合わせ・電話対応" />問い合わせ・電話対応</label>
+            <label><input type="checkbox" name="tasks" value="その他" />その他</label>
+          </div>
         </div>
         <div class="fg consent"><input type="checkbox" id="consent" name="consent" required /><label for="consent" style="font-weight:400;margin:0;">先行案内の受け取りに同意します。<span class="req">必須</span></label></div>
         <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none" />
         <button type="submit" class="submit">無料で先行登録する</button>
-        <p class="fine">ご登録はメールアドレスのみ、1分で完了します。しつこい営業のご連絡はいたしません。いただいた情報は、ご案内以外の目的には利用いたしません。</p>
+        <p class="fine">メールアドレスだけでも登録できます（1分で完了）。その他は任意です。しつこい営業のご連絡はいたしません。いただいた情報は、ご案内以外の目的には利用いたしません。</p>
       </form>
       <div class="reg-done" id="regDone">
         <div class="ck">✓</div>
@@ -478,19 +501,28 @@
   form.addEventListener('submit', async function(e){
     e.preventDefault();
     if(!form.checkValidity()){ form.reportValidity(); return; }
-    const data=Object.fromEntries(new FormData(form).entries());
+    const fd=new FormData(form);
+    const data=Object.fromEntries(fd.entries());
     const email=(data.email||'').trim();
+    const name=(data.name||'').trim();
     const company=(data.company||'').trim();
+    const phone=(data.phone||'').trim();
     const size=(data.size||'').trim();
+    const timing=(data.timing||'').trim();
+    const tasks=fd.getAll('tasks').join(' / ');
     const payload={
       access_key:W3F_KEY,
-      subject:"【SIRIUS先行登録】"+(company||email),
+      subject:"【SIRIUS先行登録】"+(company||name||email),
       from_name:"SIRIUS 先行登録フォーム",
       replyto:email,
       botcheck:!!(form.botcheck&&form.botcheck.checked),
       "メールアドレス":email,
+      "お名前":name||"（未入力）",
       "会社名":company||"（未入力）",
+      "電話番号":phone||"（未入力）",
       "従業員数":size||"（未選択）",
+      "導入希望時期":timing||"（未選択）",
+      "検討中の業務":tasks||"（未選択）",
       "同意":"あり",
       "ページURL":location.href,
       "流入元":qp('utm_source')||document.referrer||"（直接/不明）"
