@@ -64,9 +64,11 @@
   .hero .micro{margin-bottom:22px;display:inline-flex;align-items:center;gap:11px;}
   .hero .micro::before,.hero .micro::after{content:"";width:26px;height:1px;background:linear-gradient(90deg,transparent,var(--gold-2));}
   .hero .micro::after{background:linear-gradient(90deg,var(--gold-2),transparent);}
-  .badge{display:inline-flex;align-items:center;gap:9px;font-size:.72rem;letter-spacing:.12em;color:var(--gold-2);border:1px solid var(--line-d);border-radius:40px;padding:7px 18px;margin-bottom:30px;background:rgba(12,27,51,.5);}
-  .badge .dot{width:7px;height:7px;border-radius:50%;background:var(--gold-2);box-shadow:0 0 10px var(--gold-2);animation:pulse 2.4s infinite;}
-  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(227,194,114,.5)}70%{box-shadow:0 0 0 9px rgba(227,194,114,0)}100%{box-shadow:0 0 0 0 rgba(227,194,114,0)}}
+  .badge{display:inline-flex;align-items:center;gap:10px;font-size:.84rem;font-weight:600;letter-spacing:.07em;color:var(--gold-2);border:1px solid rgba(227,194,114,.55);border-radius:40px;padding:9px 22px;margin-bottom:30px;background:linear-gradient(180deg,rgba(40,32,14,.55),rgba(12,27,51,.6));box-shadow:0 0 0 1px rgba(227,194,114,.16),0 0 28px rgba(227,194,114,.28);animation:badgeGlow 2.8s ease-in-out infinite;}
+  .badge .hot{color:#fff;font-weight:800;letter-spacing:.04em;text-shadow:0 0 14px rgba(227,194,114,.6)}
+  .badge .dot{width:8px;height:8px;border-radius:50%;background:#F4DCA0;box-shadow:0 0 12px var(--gold-2);animation:pulse 2.4s infinite;}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(227,194,114,.55)}70%{box-shadow:0 0 0 10px rgba(227,194,114,0)}100%{box-shadow:0 0 0 0 rgba(227,194,114,0)}}
+  @keyframes badgeGlow{0%,100%{box-shadow:0 0 0 1px rgba(227,194,114,.16),0 0 20px rgba(227,194,114,.22)}50%{box-shadow:0 0 0 1px rgba(227,194,114,.34),0 0 40px rgba(227,194,114,.46)}}
   .hero h1{font-weight:900;color:#fff;font-size:clamp(2rem,6.6vw,4.1rem);line-height:1.36;letter-spacing:.01em;margin-bottom:26px;text-shadow:0 4px 40px rgba(96,150,230,.25);word-break:keep-all;line-break:strict;}
   .hero h1 .u{color:transparent;background:linear-gradient(180deg,#fff 40%,var(--gold-2));-webkit-background-clip:text;background-clip:text;}
   .hero .sub{font-size:clamp(1.02rem,2.2vw,1.18rem);color:var(--on);font-weight:300;max-width:31em;margin:0 auto 38px;}
@@ -257,6 +259,7 @@
   }
   @media(prefers-reduced-motion:reduce){
     .reveal{opacity:1;transform:none;transition:none}
+    .badge{animation:none}
     .badge .dot{animation:none}
     .lossfig .v.hl{animation:none}
     html{scroll-behavior:auto}
@@ -280,7 +283,7 @@
 <section class="hero">
   <div class="wrap">
     <div class="micro"><span class="eyebrow">必要なときだけの総務代行</span></div>
-    <div><span class="badge"><span class="dot"></span>先行登録受付中 ／ モニター枠 毎月10社</span></div>
+    <div><span class="badge"><span class="dot"></span>先行登録受付中 ／ モニター枠 <b class="hot">毎月10社</b></span></div>
     <h1>「<span class="u">名もなき業務</span>」から、<br>会社を解放する。</h1>
     <p class="sub"><b>総務まわりの細かな業務を、SIRIUSの担当者が代行。</b>人を雇わず、必要なときに、必要な分だけ。</p>
     <div class="hero-flow">
