@@ -125,8 +125,9 @@
   .loop h2 b{color:transparent;background:linear-gradient(180deg,var(--gold-2),var(--gold));-webkit-background-clip:text;background-clip:text;font-weight:700;}
   .loop .sub{font-size:1rem;color:var(--on);font-weight:300;max-width:27em;margin:0 auto 34px;}
   .nb{white-space:nowrap}
-  .loop .scarce{display:inline-flex;align-items:center;gap:9px;font-family:"Space Grotesk",sans-serif;font-size:.8rem;letter-spacing:.04em;color:var(--gold-2);border:1px solid var(--line-d);border-radius:40px;padding:8px 20px;margin-bottom:34px;background:rgba(12,27,51,.4)}
-  .loop .scarce .dot{width:6px;height:6px;border-radius:50%;background:var(--gold-2);box-shadow:0 0 9px var(--gold-2)}
+  .loop .scarce{display:inline-flex;align-items:center;gap:10px;font-family:"Space Grotesk",sans-serif;font-size:.86rem;font-weight:600;letter-spacing:.05em;color:var(--gold-2);border:1px solid rgba(227,194,114,.55);border-radius:40px;padding:9px 22px;margin-bottom:34px;background:linear-gradient(180deg,rgba(40,32,14,.55),rgba(12,27,51,.6));box-shadow:0 0 0 1px rgba(227,194,114,.16),0 0 28px rgba(227,194,114,.28);animation:badgeGlow 2.8s ease-in-out infinite;}
+  .loop .scarce .hot{color:#fff;font-weight:800;text-shadow:0 0 14px rgba(227,194,114,.6)}
+  .loop .scarce .dot{width:8px;height:8px;border-radius:50%;background:#F4DCA0;box-shadow:0 0 12px var(--gold-2);animation:pulse 2.4s infinite;}
 
   /* form */
   .cta .wrap{padding:24px 24px 104px;}
@@ -261,6 +262,8 @@
     .reveal{opacity:1;transform:none;transition:none}
     .badge{animation:none}
     .badge .dot{animation:none}
+    .loop .scarce{animation:none}
+    .loop .scarce .dot{animation:none}
     .lossfig .v.hl{animation:none}
     html{scroll-behavior:auto}
   }
@@ -378,7 +381,7 @@
       <span>固定費なし・使った分だけ</span>
       <span>ミスマッチのリスクなし</span>
     </div>
-    <div><span class="scarce"><span class="dot"></span>モニター枠は毎月10社・先着順</span></div>
+    <div><span class="scarce"><span class="dot"></span>モニター枠は<b class="hot">毎月10社</b>・先着順</span></div>
     <div><a class="btn btn-primary" href="#register">先行登録する（無料・1分）</a></div>
   </div>
 </section>
