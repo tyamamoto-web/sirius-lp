@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>SIRIUS｜必要なときだけの総務代行サービス｜先行登録受付中</title>
-<meta name="description" content="SIRIUSは、総務まわりのこまごました仕事を、その業務が得意な人材が代行するアウトソーシングサービスです。採用による固定費をかけず、必要なときに必要な分だけご利用いただけます。先行登録を受付中（モニター枠 毎月10社）。運営：株式会社ORIGIN。" />
-<meta property="og:title" content="SIRIUS｜必要なときだけの総務代行サービス" />
-<meta property="og:description" content="採用せずに、総務を回す。総務まわりの仕事を、その業務が得意な人材が代行します。先行登録受付中（モニター枠 毎月10社）。運営：株式会社ORIGIN。" />
+<title>SIRIUS｜中小企業のための総務アウトソーシング｜2026年7月1日開始・先行登録受付中</title>
+<meta name="description" content="SIRIUS（シリウス）は、中小企業の総務・バックオフィス業務を、必要なときに必要な分だけ支援する総務アウトソーシングです。総務を小さなタスクに分け、得意な人へ配置（スキルベース）。窓口は専任PM。月10時間・1時間3,000円から、解約自由。2026年7月1日開始、毎月10社限定で先行登録受付中。運営：株式会社ORIGIN。" />
+<meta property="og:title" content="SIRIUS｜中小企業のための総務アウトソーシング" />
+<meta property="og:description" content="人を雇うほどじゃない、でも人手が足りない総務を、必要な分だけプロに。月10時間・1時間3,000円から、解約自由。2026年7月1日開始・先行登録受付中（毎月10社限定）。運営：株式会社ORIGIN。" />
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="ja_JP" />
 
@@ -17,374 +17,377 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet" />
 <style>
   :root{
-    --ink:#060F1F;--navy:#0C1B33;--navy-2:#13294A;
-    --gold:#C9A24F;--gold-2:#E3C272;
-    --glow:rgba(96,150,230,.5);
-    --slate:#93A2BD;--on:#E9EEF6;--line-d:rgba(227,194,114,.18);--line-b:rgba(120,160,230,.14);
-    --maxw:920px;
+    --paper:#FAF8F3;--paper-2:#FFFFFF;--wash:#F3F0E8;
+    --ink:#1C1B18;--sub:#615C53;--faint:#7A7264;
+    --line:#E7E2D6;--line-2:#D9D3C4;
+    --navy:#1E3A57;--navy-d:#16293E;--gold:#8A6B2E;
+    --maxw:960px;--col:34rem;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{font-family:"Noto Sans JP",system-ui,sans-serif;color:var(--on);background:var(--ink);line-height:1.85;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;}
-  .mono{font-family:"Space Grotesk",sans-serif;}
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;position:relative;z-index:2;}
+  body{font-family:"Noto Sans JP",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.9;font-weight:400;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+  .serif{font-family:"Noto Serif JP",serif;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  .col{max-width:var(--col);margin-left:auto;margin-right:auto;}
+  a{color:var(--navy);}
 
-  /* 背景：スキル星座ネットワーク + 発光 + グリッド */
-  #net{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.85;}
-  .atmos{position:fixed;inset:0;z-index:0;pointer-events:none;
-    background:
-      radial-gradient(820px 560px at 80% 4%, rgba(96,150,230,.16), transparent 60%),
-      radial-gradient(720px 520px at 12% 88%, rgba(227,194,114,.10), transparent 62%);}
-  .grid{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5;
-    background-image:linear-gradient(rgba(120,160,230,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(120,160,230,.05) 1px,transparent 1px);
-    background-size:64px 64px;
-    -webkit-mask-image:radial-gradient(circle at 50% 30%, #000 40%, transparent 85%);
-            mask-image:radial-gradient(circle at 50% 30%, #000 40%, transparent 85%);}
+  /* eyebrow / labels */
+  .eyebrow{font-size:.72rem;font-weight:500;letter-spacing:.24em;color:var(--gold);text-transform:none;display:inline-flex;align-items:center;gap:10px;}
+  .eyebrow::before{content:"";width:22px;height:1px;background:var(--gold);opacity:.7}
 
-  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;font-weight:500;font-size:1.02rem;padding:17px 38px;border-radius:3px;transition:all .2s;cursor:pointer;border:none;font-family:inherit;position:relative;}
-  .btn-primary{background:linear-gradient(180deg,var(--gold-2),var(--gold));color:var(--ink);box-shadow:0 0 0 1px rgba(227,194,114,.4),0 14px 40px rgba(227,194,114,.22);}
-  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 0 0 1px rgba(227,194,114,.6),0 18px 50px rgba(227,194,114,.32);}
-  .btn:focus-visible{outline:2px solid var(--gold-2);outline-offset:3px}
-
-  .eyebrow{font-family:"Noto Sans JP",sans-serif;font-size:.78rem;font-weight:500;letter-spacing:.18em;color:var(--gold-2);text-shadow:0 0 18px rgba(227,194,114,.4);}
+  /* buttons */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;font-weight:500;font-size:1rem;padding:15px 34px;border-radius:2px;transition:.18s;cursor:pointer;border:none;font-family:inherit;letter-spacing:.02em;}
+  .btn-primary{background:var(--navy);color:#fff;}
+  .btn-primary:hover{background:var(--navy-d);transform:translateY(-1px)}
+  .btn-primary:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 
   /* header */
-  header.site{position:sticky;top:0;z-index:50;background:rgba(6,15,31,.7);backdrop-filter:blur(12px);border-bottom:1px solid var(--line-d);}
-  header.site .bar{display:flex;align-items:center;justify-content:space-between;height:60px;max-width:var(--maxw);margin:0 auto;padding:0 24px;}
-  .brand{font-weight:900;font-size:1.3rem;letter-spacing:.2em;color:#fff;}
-  .nav-cta{font-size:.82rem;font-weight:500;color:var(--ink);background:var(--gold-2);padding:9px 18px;border-radius:3px;text-decoration:none;transition:.2s;white-space:nowrap;box-shadow:0 0 18px rgba(227,194,114,.3);}
-  .nav-cta:hover{background:#efce86}
-  .nav-cta:focus-visible{outline:2px solid #fff;outline-offset:2px}
+  header.site{position:sticky;top:0;z-index:50;background:rgba(250,248,243,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+  header.site .bar{display:flex;align-items:center;justify-content:space-between;height:62px;max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  .brand{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.28rem;letter-spacing:.32em;color:var(--ink);}
+  .brand .tag{font-family:"Noto Sans JP",sans-serif;font-weight:400;font-size:.62rem;letter-spacing:.18em;color:var(--faint);display:block;margin-top:-2px;}
+  .nav-cta{font-size:.82rem;font-weight:500;color:var(--navy);text-decoration:none;border:1px solid var(--line-2);padding:8px 18px;border-radius:2px;transition:.18s;white-space:nowrap;}
+  .nav-cta:hover{background:var(--wash);border-color:var(--sub)}
+
+  /* section rhythm */
+  section{padding:82px 0;}
+  .rule{height:1px;background:var(--line);max-width:var(--maxw);margin:0 auto;}
+  .lead{margin-bottom:20px;}
+  h1,h2{font-family:"Noto Serif JP",serif;font-weight:600;color:var(--ink);letter-spacing:.01em;text-wrap:balance;}
+  .kicker{font-size:.9rem;color:var(--sub);font-weight:400;}
 
   /* hero */
-  .hero .wrap{padding:88px 24px 104px;text-align:center;}
-  .hero .micro{margin-bottom:22px;display:inline-flex;align-items:center;gap:11px;}
-  .hero .micro::before,.hero .micro::after{content:"";width:26px;height:1px;background:linear-gradient(90deg,transparent,var(--gold-2));}
-  .hero .micro::after{background:linear-gradient(90deg,var(--gold-2),transparent);}
-  .badge{display:inline-flex;align-items:center;gap:10px;font-size:.84rem;font-weight:600;letter-spacing:.07em;color:var(--gold-2);border:1px solid rgba(227,194,114,.55);border-radius:40px;padding:9px 22px;margin-bottom:30px;background:linear-gradient(180deg,rgba(40,32,14,.55),rgba(12,27,51,.6));box-shadow:0 0 0 1px rgba(227,194,114,.16),0 0 28px rgba(227,194,114,.28);animation:badgeGlow 2.8s ease-in-out infinite;}
-  .badge .hot{color:#fff;font-weight:800;letter-spacing:.04em;text-shadow:0 0 14px rgba(227,194,114,.6)}
-  .badge .dot{width:8px;height:8px;border-radius:50%;background:#F4DCA0;box-shadow:0 0 12px var(--gold-2);animation:pulse 2.4s infinite;}
-  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(227,194,114,.55)}70%{box-shadow:0 0 0 10px rgba(227,194,114,0)}100%{box-shadow:0 0 0 0 rgba(227,194,114,0)}}
-  @keyframes badgeGlow{0%,100%{box-shadow:0 0 0 1px rgba(227,194,114,.16),0 0 20px rgba(227,194,114,.22)}50%{box-shadow:0 0 0 1px rgba(227,194,114,.34),0 0 40px rgba(227,194,114,.46)}}
-  .hero h1{font-weight:900;color:#fff;font-size:clamp(2rem,6.6vw,4.1rem);line-height:1.36;letter-spacing:.01em;margin-bottom:26px;text-shadow:0 4px 40px rgba(96,150,230,.25);word-break:keep-all;line-break:strict;}
-  .hero h1 .u{color:transparent;background:linear-gradient(180deg,#fff 40%,var(--gold-2));-webkit-background-clip:text;background-clip:text;}
-  .hero .sub{font-size:clamp(1.02rem,2.2vw,1.18rem);color:var(--on);font-weight:300;max-width:31em;margin:0 auto 38px;}
-  .hero .sub b{color:#fff;font-weight:500;}
-  .hero .mt{margin-top:24px;font-family:"Space Grotesk",sans-serif;font-size:.78rem;letter-spacing:.06em;color:var(--slate);display:flex;gap:8px 22px;justify-content:center;flex-wrap:wrap;}
-  .hero .mt span{display:inline-flex;align-items:center;gap:7px}
-  .hero .mt span::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--gold-2);box-shadow:0 0 8px var(--gold-2)}
+  .hero{padding:72px 0 66px;text-align:center;}
+  .hero .eyebrow{margin-bottom:26px;}
+  .hero h1{font-size:clamp(2rem,5.2vw,3rem);line-height:1.5;margin-bottom:26px;font-weight:600;}
+  .hero .sub{font-size:1.04rem;color:var(--sub);font-weight:400;max-width:33em;margin:0 auto 30px;line-height:2;}
+  .facts{display:flex;justify-content:center;flex-wrap:wrap;gap:0;margin:0 auto 34px;max-width:36em;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .facts div{flex:1 1 0;min-width:120px;padding:16px 10px;}
+  .facts div+div{border-left:1px solid var(--line);}
+  .facts .n{font-family:"Noto Serif JP",serif;font-size:1.16rem;font-weight:600;color:var(--ink);}
+  .facts .l{font-size:.72rem;color:var(--faint);letter-spacing:.06em;margin-top:2px;}
+  .hero .note{font-size:.82rem;color:var(--sub);margin-top:18px;}
+  .hero .note b{color:var(--gold);font-weight:500;}
 
-  /* hero concept flow (問題→SIRIUS→結果) */
-  .hero-flow{display:flex;align-items:flex-start;justify-content:center;gap:8px 6px;margin:4px auto 36px;max-width:30em;}
-  .hero-flow .hf{display:inline-flex;flex-direction:column;align-items:center;gap:9px;flex:1 1 0;min-width:0;}
-  .hero-flow .hf-ic{width:46px;height:46px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:rgba(96,150,230,.1);border:1px solid var(--line-b);color:var(--gold-2);}
-  .hero-flow .hf.hl .hf-ic{background:rgba(227,194,114,.14);border-color:var(--line-d);box-shadow:0 0 22px rgba(227,194,114,.2);}
-  .hero-flow .hf-ic svg{width:24px;height:24px;}
-  .hero-flow .hf-t{font-size:.8rem;color:var(--on);line-height:1.4;font-weight:400;}
-  .hero-flow .hf.hl .hf-t{color:#fff;font-weight:500;}
-  .hero-flow .hf-arrow{flex:0 0 auto;display:flex;align-items:center;color:var(--gold-2);padding-top:14px;}
-  .hero-flow .hf-arrow svg{width:18px;height:18px;}
-  @media(max-width:560px){
-    .hero-flow{flex-direction:column;gap:6px;max-width:252px;}
-    .hero-flow .hf{flex-direction:row;justify-content:flex-start;gap:13px;width:100%;}
-    .hero-flow .hf-ic{width:40px;height:40px;}
-    .hero-flow .hf-ic svg{width:21px;height:21px;}
-    .hero-flow .hf-t{font-size:.9rem;}
-    .hero-flow .hf-t br{display:none;}
-    .hero-flow .hf-arrow{padding:0;transform:rotate(90deg);align-self:center;}
-  }
+  /* generic prose */
+  .prose{font-size:1rem;color:var(--sub);line-height:2.05;}
+  .prose b{color:var(--ink);font-weight:500;}
+  .center{text-align:center;}
+  h2.big{font-size:clamp(1.5rem,3.6vw,2.05rem);line-height:1.6;margin:16px 0 22px;}
+  .sec-lead{text-align:center;margin-bottom:14px;}
 
-  .divider{height:1px;background:linear-gradient(90deg,transparent,var(--line-d),transparent);max-width:var(--maxw);margin:0 auto;}
+  /* task chips (problem) */
+  .tasks{display:flex;justify-content:center;flex-wrap:wrap;gap:10px 12px;margin:30px auto 0;max-width:44em;}
+  .task{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line-2);border-radius:3px;padding:10px 15px;font-size:.9rem;color:var(--ink);background:var(--paper-2);}
+  .task svg{width:19px;height:19px;color:var(--navy);flex-shrink:0;}
+  .task.more{color:var(--faint);border-style:dashed;}
 
-  /* recognition */
-  .recog .wrap{padding:92px 24px;text-align:center;}
-  .recog .lbl{margin-bottom:24px;}
-  .recog .big{font-weight:900;color:#fff;font-size:clamp(1.7rem,4.6vw,2.7rem);line-height:1.5;margin-bottom:22px;letter-spacing:.01em;word-break:keep-all;}
-  .recog .desc{font-size:1.02rem;color:var(--on);font-weight:300;max-width:28em;margin:0 auto;}
-  .recog .stat{margin:42px auto 0;padding-top:30px;border-top:1px solid var(--line-b);max-width:30em;}
-  .recog .stat .n{font-weight:700;color:var(--gold-2);font-size:clamp(1.4rem,3vw,1.9rem);text-shadow:0 0 22px rgba(227,194,114,.3)}
-  .recog .stat .t{font-family:"Space Grotesk",sans-serif;font-size:.82rem;letter-spacing:.02em;color:var(--slate);margin-top:8px}
+  /* loss figure */
+  .loss{margin:40px auto 0;max-width:40em;text-align:center;}
+  .loss-lead{font-size:1.02rem;color:var(--ink);font-weight:400;margin-bottom:6px;}
+  .loss-lead b{font-family:"Noto Serif JP",serif;color:var(--navy);font-weight:700;white-space:nowrap;}
+  .loss-lead .est{display:block;font-size:.72rem;color:var(--faint);font-weight:400;margin-top:5px;letter-spacing:.02em;}
+  .lossfig{display:block;width:100%;max-width:520px;height:auto;margin:14px auto 4px;}
+  .lossfig text{font-family:"Noto Sans JP",sans-serif;}
+  .lossfig .v{fill:var(--ink);font-weight:700;font-size:17px;}
+  .lossfig .v.hl{fill:var(--navy);font-size:22px;font-weight:700;}
+  .lossfig .y{fill:var(--faint);font-size:13px;}
+  .lossfig .cap{fill:var(--faint);font-size:12px;letter-spacing:.04em;}
+  .loss-src{font-size:.7rem;color:var(--faint);margin-top:14px;line-height:1.7;text-align:left;}
 
-  /* shift */
-  .shift .wrap{padding:98px 24px;text-align:center;}
-  .shift .lbl{margin-bottom:22px;}
-  .shift h2{font-weight:900;color:#fff;font-size:clamp(2rem,5.6vw,3.2rem);line-height:1.4;margin-bottom:24px;letter-spacing:.01em;}
-  .shift h2 .u{color:transparent;background:linear-gradient(180deg,var(--gold-2),var(--gold));-webkit-background-clip:text;background-clip:text;}
-  .shift .sub{font-size:1.04rem;color:var(--on);font-weight:300;max-width:30em;margin:0 auto 38px;}
-  .shift .sub b{color:#fff;font-weight:500}
-  .triad{display:flex;justify-content:center;flex-wrap:wrap;gap:14px 16px;}
-  .triad span{border:1px solid var(--line-b);border-radius:40px;padding:11px 24px;font-size:.95rem;color:#fff;display:inline-flex;align-items:center;gap:9px;background:rgba(12,27,51,.4);backdrop-filter:blur(4px);}
-  .triad span::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold-2);box-shadow:0 0 10px var(--gold-2)}
+  /* before / after (skill-based) */
+  .ba{display:flex;gap:16px;margin:34px auto 0;max-width:40em;align-items:stretch;}
+  .ba .card{flex:1 1 0;min-width:0;border:1px solid var(--line-2);border-radius:4px;padding:22px 20px;background:var(--paper-2);}
+  .ba .card.now{background:var(--wash);}
+  .ba .card .h{font-size:.74rem;letter-spacing:.14em;color:var(--faint);margin-bottom:10px;}
+  .ba .card .t{font-family:"Noto Serif JP",serif;font-size:1.02rem;font-weight:600;color:var(--ink);line-height:1.6;margin-bottom:8px;}
+  .ba .card p{font-size:.88rem;color:var(--sub);line-height:1.85;}
+  .ba .card.aft .t{color:var(--navy);}
+  .ba-arrow{display:flex;align-items:center;color:var(--gold);flex:0 0 auto;}
+  .ba-arrow svg{width:22px;height:22px;}
 
-  /* open loop */
-  .loop .wrap{padding:96px 24px;text-align:center;}
-  .loop h2{font-weight:700;color:#fff;font-size:clamp(1.6rem,3.8vw,2.4rem);line-height:1.55;margin-bottom:20px;letter-spacing:.01em;}
-  .loop h2 b{color:transparent;background:linear-gradient(180deg,var(--gold-2),var(--gold));-webkit-background-clip:text;background-clip:text;font-weight:700;}
-  .loop .sub{font-size:1rem;color:var(--on);font-weight:300;max-width:27em;margin:0 auto 34px;}
-  .nb{white-space:nowrap}
-  .loop .scarce{display:inline-flex;align-items:center;gap:10px;font-family:"Space Grotesk",sans-serif;font-size:.86rem;font-weight:600;letter-spacing:.05em;color:var(--gold-2);border:1px solid rgba(227,194,114,.55);border-radius:40px;padding:9px 22px;margin-bottom:34px;background:linear-gradient(180deg,rgba(40,32,14,.55),rgba(12,27,51,.6));box-shadow:0 0 0 1px rgba(227,194,114,.16),0 0 28px rgba(227,194,114,.28);animation:badgeGlow 2.8s ease-in-out infinite;}
-  .loop .scarce .hot{color:#fff;font-weight:800;text-shadow:0 0 14px rgba(227,194,114,.6)}
-  .loop .scarce .dot{width:8px;height:8px;border-radius:50%;background:#F4DCA0;box-shadow:0 0 12px var(--gold-2);animation:pulse 2.4s infinite;}
+  /* features (numbered) */
+  .feat{max-width:42em;margin:34px auto 0;}
+  .feat .item{display:flex;gap:22px;padding:26px 0;border-top:1px solid var(--line);}
+  .feat .item:last-child{border-bottom:1px solid var(--line);}
+  .feat .num{font-family:"Noto Serif JP",serif;font-size:1.5rem;font-weight:600;color:var(--gold);flex:0 0 auto;line-height:1.3;min-width:2.2rem;}
+  .feat .ft{font-family:"Noto Serif JP",serif;font-size:1.12rem;font-weight:600;color:var(--ink);margin-bottom:6px;line-height:1.55;}
+  .feat .fd{font-size:.94rem;color:var(--sub);line-height:1.9;}
+
+  /* trust list */
+  .trust{max-width:40em;margin:32px auto 0;}
+  .trust .row{display:flex;gap:15px;padding:18px 0;border-top:1px solid var(--line);}
+  .trust .row:last-child{border-bottom:1px solid var(--line);}
+  .trust .ic{flex:0 0 auto;color:var(--navy);margin-top:2px;}
+  .trust .ic svg{width:20px;height:20px;}
+  .trust .tt{font-weight:500;color:var(--ink);font-size:.98rem;}
+  .trust .td{font-size:.9rem;color:var(--sub);line-height:1.85;margin-top:2px;}
+
+  /* pricing */
+  .price{max-width:34em;margin:32px auto 0;border:1px solid var(--line-2);border-radius:5px;background:var(--paper-2);overflow:hidden;}
+  .price .row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:16px 22px;border-bottom:1px solid var(--line);}
+  .price .row:last-child{border-bottom:none;}
+  .price .k{font-size:.86rem;color:var(--sub);}
+  .price .v{font-family:"Noto Serif JP",serif;font-weight:600;color:var(--ink);text-align:right;font-size:1.02rem;}
+  .price .v .u{font-family:"Noto Sans JP",sans-serif;font-weight:400;font-size:.8rem;color:var(--sub);margin-left:3px;}
+  .price .row.hl{background:var(--wash);}
+  .price-note{font-size:.72rem;color:var(--faint);text-align:center;margin-top:12px;}
+
+  /* closing / scarcity */
+  .close{text-align:center;}
+  .scarce{display:inline-flex;align-items:center;gap:9px;font-size:.82rem;letter-spacing:.06em;color:var(--gold);border:1px solid var(--line-2);border-radius:40px;padding:8px 20px;margin:8px 0 26px;background:var(--paper-2);}
+  .scarce .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);}
 
   /* form */
-  .cta .wrap{padding:24px 24px 104px;}
+  .cta{padding-top:8px;}
   .cta-box{max-width:520px;margin:0 auto;}
-  form.reg{position:relative;background:#fff;border-radius:10px;padding:40px 34px;color:#0A1A2F;box-shadow:0 0 0 1px rgba(227,194,114,.35),0 40px 90px rgba(0,0,0,.55),0 0 80px rgba(96,150,230,.12);}
-  form.reg::before{content:"";position:absolute;inset:0;border-radius:10px;padding:1px;background:linear-gradient(160deg,rgba(227,194,114,.7),transparent 40%,transparent 70%,rgba(96,150,230,.5));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;}
-  .reg .ftitle{text-align:center;margin-bottom:10px;}
-  .reg .ftitle .k{font-family:"Space Grotesk",sans-serif;font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
-  .reg .ftitle .t{font-weight:900;font-size:1.5rem;color:#0A1A2F;}
-  .reg .ftitle .s{font-size:.86rem;color:#5C6675;margin-top:8px;}
-  .reg .fg{margin:18px 0;}
-  .reg label{display:block;font-size:.82rem;font-weight:500;margin-bottom:6px;color:#22303f}
-  .reg label .req{color:var(--gold);margin-left:4px}
-  .reg input,.reg select{width:100%;font-family:inherit;font-size:.95rem;padding:13px 14px;border:1px solid #E2E6EB;border-radius:5px;background:#fbfcfe;color:#0A1A2F;transition:border-color .2s,box-shadow .2s;}
-  .reg input:focus,.reg select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,162,79,.14)}
-  .reg .consent{display:flex;gap:10px;align-items:flex-start;font-size:.78rem;color:#5C6675;line-height:1.6;}
-  .reg .consent input{width:auto;margin-top:3px;flex-shrink:0}
-  .reg .opthint{font-size:.76rem;color:#8A94A3;margin:-4px 0 14px;line-height:1.5}
+  form.reg{background:var(--paper-2);border:1px solid var(--line-2);border-radius:6px;padding:38px 32px;box-shadow:0 24px 60px rgba(30,40,60,.06);}
+  .reg .ftitle{text-align:center;margin-bottom:22px;}
+  .reg .ftitle .k{font-size:.66rem;letter-spacing:.26em;color:var(--gold);margin-bottom:10px;}
+  .reg .ftitle .t{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.4rem;color:var(--ink);}
+  .reg .ftitle .s{font-size:.84rem;color:var(--sub);margin-top:10px;line-height:1.8;}
+  .reg .fg{margin:16px 0;}
+  .reg label{display:block;font-size:.8rem;font-weight:500;margin-bottom:6px;color:var(--ink);}
+  .reg label .req{color:var(--gold);margin-left:6px;font-size:.72rem;}
+  .reg input,.reg select{width:100%;font-family:inherit;font-size:.95rem;padding:12px 14px;border:1px solid var(--line-2);border-radius:3px;background:#fff;color:var(--ink);transition:border-color .18s,box-shadow .18s;}
+  .reg input:focus,.reg select:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(30,58,87,.1)}
+  .reg .opthint{font-size:.76rem;color:var(--faint);margin:-2px 0 14px;line-height:1.6}
   .reg .checks{display:flex;flex-wrap:wrap;gap:8px;margin-top:2px}
-  .reg .checks label{display:inline-flex;align-items:center;gap:7px;font-size:.82rem;font-weight:400;margin:0;color:#22303f;border:1px solid #E2E6EB;border-radius:7px;padding:9px 13px;cursor:pointer;background:#fbfcfe;transition:.15s}
+  .reg .checks label{display:inline-flex;align-items:center;gap:7px;font-size:.82rem;font-weight:400;margin:0;color:var(--ink);border:1px solid var(--line-2);border-radius:3px;padding:9px 13px;cursor:pointer;background:#fff;transition:.15s}
   .reg .checks input{width:auto;margin:0;flex-shrink:0}
-  .reg .checks label:hover{border-color:#c9ccd2}
-  .reg .checks label:has(input:checked){border-color:#0C1B33;background:#eef2f8;font-weight:500}
-  .reg .submit{width:100%;background:linear-gradient(180deg,#13294A,#0C1B33);color:#fff;font-weight:500;font-size:1.04rem;padding:17px;border-radius:5px;margin-top:8px;transition:.2s;cursor:pointer;border:none;font-family:inherit;}
-  .reg .submit:hover{filter:brightness(1.15)}
+  .reg .checks label:hover{border-color:var(--sub)}
+  .reg .checks label:has(input:checked){border-color:var(--navy);background:var(--wash);font-weight:500}
+  .reg .consent{display:flex;gap:10px;align-items:flex-start;font-size:.8rem;color:var(--sub);line-height:1.7;}
+  .reg .consent input{width:auto;margin-top:4px;flex-shrink:0}
+  .reg .submit{width:100%;background:var(--navy);color:#fff;font-weight:500;font-size:1.02rem;padding:16px;border-radius:3px;margin-top:10px;transition:.18s;cursor:pointer;border:none;font-family:inherit;}
+  .reg .submit:hover{background:var(--navy-d)}
   .reg .submit:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
-  .reg .fine{font-size:.74rem;color:#8A94A3;margin-top:14px;text-align:center}
-  .reg-done{display:none;text-align:center;padding:34px 10px;}
+  .reg .fine{font-size:.74rem;color:var(--faint);margin-top:14px;text-align:center;line-height:1.7}
+  .reg-done{display:none;text-align:center;padding:30px 10px;}
   .reg-done.show{display:block}
-  .reg-done .ck{width:54px;height:54px;border-radius:50%;background:#0C1B33;color:var(--gold-2);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-size:1.6rem;box-shadow:0 0 30px rgba(96,150,230,.3)}
-  .reg-done h3{font-weight:900;font-size:1.3rem;margin-bottom:10px;color:#0A1A2F}
-  .reg-done p{font-size:.92rem;color:#5C6675}
+  .reg-done .ck{width:52px;height:52px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-size:1.5rem;}
+  .reg-done h3{font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.24rem;margin-bottom:10px;color:var(--ink)}
+  .reg-done p{font-size:.92rem;color:var(--sub);line-height:1.9}
 
-  footer.site{text-align:center;border-top:1px solid var(--line-d);}
-  footer.site .wrap{padding:40px 24px;}
-  footer .mark{font-weight:900;letter-spacing:.2em;color:#fff;font-size:1.05rem}
-  footer .co{font-size:.76rem;margin-top:8px;color:var(--slate)}
-  footer .cp{font-family:"Space Grotesk",sans-serif;font-size:.72rem;margin-top:16px;color:#5C6675;letter-spacing:.04em}
+  /* footer / company */
+  footer.site{border-top:1px solid var(--line);background:var(--wash);}
+  footer.site .wrap{padding:52px 24px;}
+  footer .mark{font-family:"Noto Serif JP",serif;font-weight:600;letter-spacing:.3em;color:var(--ink);font-size:1.1rem;text-align:center;}
+  footer .co-lead{text-align:center;font-size:.76rem;color:var(--faint);letter-spacing:.14em;margin:18px 0 14px;}
+  .company{max-width:32em;margin:0 auto;font-size:.84rem;}
+  .company .row{display:flex;gap:16px;padding:9px 0;border-top:1px solid var(--line-2);}
+  .company .row:last-child{border-bottom:1px solid var(--line-2);}
+  .company .k{flex:0 0 6.5em;color:var(--faint);}
+  .company .v{color:var(--ink);}
+  .company .v a{color:var(--navy);text-decoration:none;}
+  footer .cp{text-align:center;font-size:.72rem;color:var(--faint);letter-spacing:.04em;margin-top:24px;}
 
-  .sticky-cta{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(6,15,31,.94);backdrop-filter:blur(8px);border-top:1px solid var(--line-d);padding:11px 16px;transition:transform .3s ease;}
+  /* sticky mobile cta */
+  .sticky-cta{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(250,248,243,.96);backdrop-filter:blur(8px);border-top:1px solid var(--line-2);padding:11px 16px;transition:transform .3s ease;}
   .sticky-cta.hide{transform:translateY(120%);}
-  .sticky-cta a{display:block;text-align:center;background:linear-gradient(180deg,var(--gold-2),var(--gold));color:var(--ink);font-weight:500;font-size:.96rem;padding:14px;border-radius:4px;text-decoration:none;box-shadow:0 0 20px rgba(227,194,114,.3)}
+  .sticky-cta a{display:block;text-align:center;background:var(--navy);color:#fff;font-weight:500;font-size:.96rem;padding:14px;border-radius:3px;text-decoration:none;}
 
-  .reveal{opacity:0;transform:translateY(16px);transition:opacity .8s ease,transform .8s ease}
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease}
   .reveal.in{opacity:1;transform:none}
 
-  /* comparison */
-  .cmp-sec .wrap{padding:92px 24px;}
-  .cmp-sec .lbl{margin-bottom:22px;text-align:center;}
-  .cmp-sec h2{font-weight:900;color:#fff;font-size:clamp(1.6rem,4.2vw,2.5rem);line-height:1.42;margin-bottom:34px;text-align:center;letter-spacing:.01em;word-break:keep-all;}
-  .cmp-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:12px;border:1px solid var(--line-b);background:rgba(12,27,51,.35);backdrop-filter:blur(4px);}
-  table.cmp{width:100%;min-width:580px;border-collapse:separate;border-spacing:0;}
-  table.cmp th,table.cmp td{padding:15px 16px;text-align:left;font-size:.9rem;border-bottom:1px solid var(--line-b);vertical-align:top;line-height:1.5;}
-  table.cmp thead th{font-weight:700;color:#fff;font-size:.92rem;border-bottom:1px solid var(--line-d);}
-  table.cmp tbody th{font-weight:500;color:var(--slate);font-size:.82rem;white-space:nowrap;}
-  table.cmp td{color:var(--slate);}
-  table.cmp .col-s{background:rgba(227,194,114,.07);}
-  table.cmp thead .col-s{color:var(--gold-2);text-shadow:0 0 16px rgba(227,194,114,.35);}
-  table.cmp td.col-s{color:#fff;font-weight:500;}
-  table.cmp tbody tr:last-child th,table.cmp tbody tr:last-child td{border-bottom:none;}
-  .cmp-hint{display:none;text-align:center;font-size:.8rem;color:var(--slate);margin-top:12px;}
-
-  /* mechanism flow (shift) */
-  .flow{display:flex;align-items:stretch;justify-content:center;gap:10px;margin:6px 0 36px;}
-  .flow-step{flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;gap:12px;padding:22px 12px;border:1px solid var(--line-b);border-radius:14px;background:rgba(12,27,51,.4);backdrop-filter:blur(4px);text-align:center;}
-  .flow-step.hl{border-color:var(--line-d);background:rgba(227,194,114,.08);box-shadow:0 0 34px rgba(227,194,114,.12);}
-  .flow-ic{width:48px;height:48px;display:flex;align-items:center;justify-content:center;border-radius:13px;background:rgba(96,150,230,.10);color:var(--gold-2);}
-  .flow-step.hl .flow-ic{background:rgba(227,194,114,.14);}
-  .flow-ic svg{width:26px;height:26px;}
-  .flow-t{font-size:.86rem;font-weight:500;color:#fff;line-height:1.45;}
-  .flow-arrow{display:flex;align-items:center;justify-content:center;color:var(--gold-2);flex:0 0 22px;}
-  .flow-arrow svg{width:22px;height:22px;}
-
-  /* problem task chips (recognition) */
-  .tasks{display:flex;justify-content:center;flex-wrap:wrap;gap:10px 12px;margin:26px 0 22px;}
-  .task{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line-b);border-radius:10px;padding:11px 16px;font-size:.9rem;color:#fff;background:rgba(12,27,51,.4);backdrop-filter:blur(4px);}
-  .task svg{width:20px;height:20px;color:var(--gold-2);flex-shrink:0;}
-  .task.more{color:var(--slate);font-size:.85rem;}
-
-  /* loss calc + accumulation chart (recognition) */
-  .loss{margin:34px auto 0;max-width:38em;}
-  .loss-lead{font-size:1.06rem;color:var(--on);font-weight:300;line-height:1.7;margin-bottom:4px;}
-  .loss-lead b{color:var(--gold-2);font-weight:700;white-space:nowrap;}
-  .lossfig{display:block;width:100%;max-width:540px;height:auto;margin:12px auto 2px;}
-  .lossfig text{font-family:"Noto Sans JP",sans-serif;}
-  .lossfig .v{fill:#fff;font-weight:700;font-size:18px;}
-  .lossfig .v.hl{fill:var(--gold-2);font-size:24px;animation:lossglow 2.8s ease-in-out infinite;}
-  .lossfig .y{fill:var(--slate);font-size:14px;}
-  .lossfig .cap{fill:var(--slate);font-size:13px;letter-spacing:.04em;}
-  @keyframes lossglow{0%,100%{opacity:.82}50%{opacity:1}}
-  .loss-cap{font-size:.92rem;color:var(--slate);line-height:1.65;margin-top:6px;}
-  .loss-cap b{color:var(--gold-2);font-weight:700;}
-  .loss-src{font-size:.7rem;color:#6f7d95;margin-top:14px;line-height:1.55;}
-
-  @media(max-width:680px){
-    .flow{flex-direction:column;align-items:stretch;gap:8px;}
-    .flow-step{flex-direction:row;justify-content:flex-start;text-align:left;gap:14px;padding:15px 18px;}
-    .flow-step .flow-t br{display:none;}
-    .flow-arrow{flex:0 0 auto;padding:2px 0;transform:rotate(90deg);}
-  }
-
-  @media(max-width:760px){
-    .sticky-cta{display:block}
-    footer.site .wrap{padding-bottom:84px}
-    .grid{background-size:48px 48px}
-
-    /* 縦の余白を詰めて間延びを防ぐ */
-    .hero .wrap{padding:58px 22px 70px}
-    .recog .wrap,.shift .wrap,.loop .wrap,.cmp-sec .wrap{padding:58px 22px}
-    .cta .wrap{padding:20px 20px 88px}
-
-    /* 見出し：縮小＋CJK折り返し許可で画面外あふれを防止 */
-    .hero h1{font-size:1.7rem;line-height:1.42;word-break:normal}
-    .recog .big{font-size:1.5rem;line-height:1.5;word-break:normal}
-    .shift h2{font-size:1.65rem}
-    .loop h2{font-size:1.45rem}
-    .cmp-sec h2{font-size:1.45rem;word-break:normal}
-    .hero .sub{font-size:1.02rem}
-
-    /* フォーム：入力16px以上でiOSのフォーカス時ズームを防ぐ／余白調整 */
-    form.reg{padding:30px 20px}
-    .reg input,.reg select{font-size:16px}
-    .reg .ftitle .t{font-size:1.35rem}
-
-    /* 比較表：コンパクト化＋横スクロールの誘導を表示 */
-    table.cmp{min-width:500px}
-    table.cmp th,table.cmp td{padding:13px 12px;font-size:.85rem}
-    table.cmp tbody th{font-size:.78rem}
-    .cmp-hint{display:block}
+  @media(max-width:720px){
+    section{padding:58px 0;}
+    .hero{padding:48px 0 50px;}
+    .hero h1{font-size:1.6rem;line-height:1.62;}
+    h2.big{font-size:1.4rem;}
+    .ba{flex-direction:column;}
+    .ba-arrow{justify-content:center;transform:rotate(90deg);}
+    .feat .item{gap:16px;}
+    .sticky-cta{display:block;}
+    footer.site .wrap{padding-bottom:84px;}
+    .facts div{min-width:0;flex-basis:33%;}
+    form.reg{padding:30px 20px;}
+    .reg input,.reg select{font-size:16px;}
   }
   @media(prefers-reduced-motion:reduce){
     .reveal{opacity:1;transform:none;transition:none}
-    .badge{animation:none}
-    .badge .dot{animation:none}
-    .loop .scarce{animation:none}
-    .loop .scarce .dot{animation:none}
-    .lossfig .v.hl{animation:none}
     html{scroll-behavior:auto}
   }
 </style>
 </head>
 <body>
 
-<canvas id="net"></canvas>
-<div class="atmos"></div>
-<div class="grid"></div>
-
 <header class="site">
   <div class="bar">
-    <span class="brand">SIRIUS</span>
-    <a class="nav-cta" href="#register">先行登録する</a>
+    <span class="brand">SIRIUS<span class="tag">総務アウトソーシング</span></span>
+    <a class="nav-cta" href="#register">先行登録</a>
   </div>
 </header>
 
 <!-- HERO -->
 <section class="hero">
   <div class="wrap">
-    <div class="micro"><span class="eyebrow">必要なときだけの総務代行</span></div>
-    <div><span class="badge"><span class="dot"></span>先行登録受付中 ／ モニター枠 <b class="hot">毎月10社</b></span></div>
-    <h1>「<span class="u">名もなき業務</span>」から、<br>会社を解放する。</h1>
-    <p class="sub"><b>総務まわりの細かな業務を、SIRIUSの担当者が代行。</b>人を雇わず、必要なときに、必要な分だけ。</p>
-    <div class="hero-flow">
-      <div class="hf">
-        <div class="hf-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 12l9 5 9-5"/><path d="M3 16l9 5 9-5"/></svg></div>
-        <div class="hf-t">積み重なる<br>総務業務</div>
-      </div>
-      <div class="hf-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-      <div class="hf">
-        <div class="hf-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5l2.3 6.4 6.4 2.3-6.4 2.3L12 19.9l-2.3-6.4L3.3 11.2l6.4-2.3z"/></svg></div>
-        <div class="hf-t">SIRIUSが<br>引き受ける</div>
-      </div>
-      <div class="hf-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-      <div class="hf hl">
-        <div class="hf-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg></div>
-        <div class="hf-t">経営者の<br>時間が戻る</div>
-      </div>
+    <span class="eyebrow">中小企業のための総務アウトソーシング ／ 2026年7月1日 開始</span>
+    <h1>総務は、<br>「必要な分だけ」でいい。</h1>
+    <p class="sub">「人を雇うほどじゃない、でも人手が足りない」。そんな総務を、<b>小さなタスクに分け、それぞれ得意な人へ</b>。窓口は専任のPM（プロジェクトマネージャー）がまとめて引き受けます。</p>
+    <div class="facts">
+      <div><div class="n">月10時間〜</div><div class="l">最低ご利用</div></div>
+      <div><div class="n">3,000円<span style="font-size:.8rem;font-weight:400">／時</span></div><div class="l">ご利用料金</div></div>
+      <div><div class="n">解約自由</div><div class="l">使わない月は停止可</div></div>
     </div>
     <a class="btn btn-primary" href="#register">先行登録する（無料・1分）</a>
-    <div class="mt">
-      <span>得意な人が担当</span>
-      <span>オンライン完結</span>
-      <span>1時間単位から</span>
-    </div>
+    <p class="note">2026年7月1日サービス開始。一社ずつ丁寧に立ち上げるため、<b>毎月10社・先着順</b>で先行登録を受け付けています。</p>
   </div>
 </section>
 
-<div class="divider"></div>
+<div class="rule"></div>
 
-<!-- RECOGNITION -->
+<!-- PROBLEM -->
 <section class="recog">
-  <div class="wrap reveal">
-    <p class="lbl eyebrow">経営者の、見えない負担</p>
-    <p class="big">これは、誰の仕事でしょうか。</p>
+  <div class="wrap">
+    <div class="sec-lead"><span class="eyebrow">経営者の、見えない負担</span></div>
+    <h2 class="big center">その総務、いつのまにか<br>あなたの時間を奪っていませんか。</h2>
+    <p class="prose col center">契約書づくり、請求・経費の処理、データ入力、問い合わせ対応——専任を雇うほどではないけれど、放ってもおけない。こうした<b>「名もなき総務」</b>が、社長や社員の本業の時間を、少しずつ削っていきます。</p>
     <div class="tasks">
-      <div class="task"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9.5 4V3.2a1.2 1.2 0 0 1 1.2-1.2h2.6a1.2 1.2 0 0 1 1.2 1.2V4"/><path d="M8.6 10.8l1.3 1.3 2.4-2.4"/><path d="M8.6 15.3l1.3 1.3 2.4-2.4"/></svg><span>社内アンケート・出欠の集計</span></div>
-      <div class="task"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/><path d="M2.5 4H5l2.2 11.1a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.5-1.2L20.5 7.5H6"/></svg><span>備品・消耗品のネット発注</span></div>
-      <div class="task"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17"/><path d="M8 3v3M16 3v3"/></svg><span>会議室・日程の調整</span></div>
-      <div class="task"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a3 3 0 0 0-3 3c0 1.6 1.2 2.2 1.2 3.6 0 .9-.7 1.4-1.7 1.4h7c-1 0-1.7-.5-1.7-1.4 0-1.4 1.2-2 1.2-3.6a3 3 0 0 0-3-3z"/><rect x="4.5" y="14.5" width="15" height="3" rx="1"/><path d="M4.5 20.5h15"/></svg><span>押印・契約書類の取りまとめ</span></div>
-      <div class="task"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6 8.5-6"/></svg><span>慶弔・お祝いの電報手配</span></div>
-      <div class="task"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="11" rx="2"/><path d="M9 8V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><path d="M10 12v3M14 12v3"/></svg><span>出張・交通の手配</span></div>
+      <div class="task"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9.5 4V3.2a1.2 1.2 0 0 1 1.2-1.2h2.6a1.2 1.2 0 0 1 1.2 1.2V4"/><path d="M8.6 10.8l1.3 1.3 2.4-2.4"/><path d="M8.6 15.3l1.3 1.3 2.4-2.4"/></svg><span>社内アンケート・出欠の集計</span></div>
+      <div class="task"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/><path d="M2.5 4H5l2.2 11.1a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.5-1.2L20.5 7.5H6"/></svg><span>備品・消耗品のネット発注</span></div>
+      <div class="task"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17"/><path d="M8 3v3M16 3v3"/></svg><span>会議室・日程の調整</span></div>
+      <div class="task"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a3 3 0 0 0-3 3c0 1.6 1.2 2.2 1.2 3.6 0 .9-.7 1.4-1.7 1.4h7c-1 0-1.7-.5-1.7-1.4 0-1.4 1.2-2 1.2-3.6a3 3 0 0 0-3-3z"/><rect x="4.5" y="14.5" width="15" height="3" rx="1"/><path d="M4.5 20.5h15"/></svg><span>押印・契約書類の取りまとめ</span></div>
+      <div class="task"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6 8.5-6"/></svg><span>慶弔・お祝いの電報手配</span></div>
+      <div class="task"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="11" rx="2"/><path d="M9 8V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><path d="M10 12v3M14 12v3"/></svg><span>出張・交通の手配</span></div>
       <div class="task more">ほかにも、数えきれず…</div>
     </div>
-    <p class="desc">こうした小さな業務が積み重なり、経営者の貴重な時間を奪っていきます。</p>
     <div class="loss">
-      <p class="loss-lead">その積み重ねは、<b>毎月およそ12.4万円</b>の見えないコストになります。</p>
-      <svg class="lossfig" viewBox="0 0 600 268" role="img" aria-label="放置した場合の累積損失の試算。1年で約149万円、3年で約447万円、5年で約745万円。">
-        <defs>
-          <linearGradient id="lbg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6aa0ff" stop-opacity=".5"/><stop offset="1" stop-color="#6aa0ff" stop-opacity=".07"/></linearGradient>
-          <linearGradient id="lbh" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E3C272" stop-opacity=".95"/><stop offset="1" stop-color="#E3C272" stop-opacity=".14"/></linearGradient>
-        </defs>
-        <text class="cap" x="56" y="20" text-anchor="start">放置した場合の累積損失（試算）</text>
-        <line x1="56" y1="216" x2="544" y2="216" stroke="rgba(120,160,230,.22)" stroke-width="1"/>
-        <rect x="108" y="180" width="84" height="36" rx="6" fill="url(#lbg)"/>
-        <text class="v" x="150" y="170" text-anchor="middle">約149万円</text>
-        <text class="y" x="150" y="240" text-anchor="middle">1年</text>
-        <rect x="258" y="108" width="84" height="108" rx="6" fill="url(#lbg)"/>
-        <text class="v" x="300" y="98" text-anchor="middle">約447万円</text>
-        <text class="y" x="300" y="240" text-anchor="middle">3年</text>
-        <rect x="408" y="36" width="84" height="180" rx="6" fill="url(#lbh)"/>
-        <text class="v hl" x="450" y="26" text-anchor="middle">約745万円</text>
-        <text class="y" x="450" y="240" text-anchor="middle">5年</text>
+      <p class="loss-lead">その積み重ねは、<b>毎月およそ12.4万円</b>もの見えないコストになりかねません。<span class="est">※以下は、一定の前提に基づく当社試算です。</span></p>
+      <svg class="lossfig" viewBox="0 0 600 250" role="img" aria-label="放置した場合の累積損失の試算。1年で約149万円、3年で約447万円、5年で約745万円。">
+        <text class="cap" x="52" y="18" text-anchor="start">放置した場合の累積損失（試算）</text>
+        <line x1="52" y1="206" x2="548" y2="206" stroke="#D9D3C4" stroke-width="1"/>
+        <rect x="104" y="172" width="80" height="34" fill="#1E3A57" fill-opacity=".28"/>
+        <text class="v" x="144" y="162" text-anchor="middle">約149万円</text>
+        <text class="y" x="144" y="228" text-anchor="middle">1年</text>
+        <rect x="256" y="104" width="80" height="102" fill="#1E3A57" fill-opacity=".5"/>
+        <text class="v" x="296" y="94" text-anchor="middle">約447万円</text>
+        <text class="y" x="296" y="228" text-anchor="middle">3年</text>
+        <rect x="408" y="36" width="80" height="170" fill="#1E3A57"/>
+        <text class="v hl" x="448" y="26" text-anchor="middle">約745万円</text>
+        <text class="y" x="448" y="228" text-anchor="middle">5年</text>
       </svg>
-      <p class="loss-cap">放置すれば、損失は積み上がります。年間で<b>約149万円</b>、5年では<b>約745万円</b>に。</p>
-      <p class="loss-src">※前提：経営者が総務等の非コア業務を兼務（中小企業庁「小規模企業白書」）。週5時間と仮定した試算。時間単価＝時間当たり労働生産性5,720円／時（日本生産性本部「労働生産性の国際比較2025」）。</p>
+      <p class="loss-src">※前提：総務等の非コア業務を経営者や社員が兼務している状況を想定（中小企業庁「小規模企業白書」）。その作業時間を<b>週5時間と当社が仮定</b>した一例の試算です。時間単価は時間当たり労働生産性 5,720円／時（日本生産性本部「労働生産性の国際比較2025」）を用いています。</p>
     </div>
   </div>
 </section>
 
-<div class="divider"></div>
+<div class="rule"></div>
+
+<!-- SKILL-BASED -->
+<section class="shift">
+  <div class="wrap">
+    <div class="sec-lead"><span class="eyebrow">SIRIUSの考え方</span></div>
+    <h2 class="big center">「総務は、この人」を、やめる。</h2>
+    <p class="prose col center">これまで総務は、一人の担当者に丸ごと任せるのが当たり前でした。けれど、その人が休めば・辞めれば止まってしまう。<b>特定の人に業務が偏る“属人化”</b>のリスクが残ります。</p>
+    <div class="ba">
+      <div class="card now">
+        <div class="h">これまで</div>
+        <div class="t">総務を、ひとりに集約</div>
+        <p>経理も労務も庶務も、特定の担当者へ。「あの人しか分からない」が生まれ、休む・辞めるで止まる。</p>
+      </div>
+      <div class="ba-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <div class="card aft">
+        <div class="h">SIRIUS</div>
+        <div class="t">タスク×スキルで、分担</div>
+        <p>仕事を小さなタスクに分け、得意な人へ配置。厚労省の公的基準で標準化するから、担当が代わっても同じ品質。</p>
+      </div>
+    </div>
+    <p class="prose col center" style="margin-top:28px;">仕事を小さな“作業”に分け、それぞれに必要なスキルを見極めて配置する——この考え方を<b>「スキルベース」</b>と呼びます。スキルは、厚生労働省の公的指標<b>「職業能力評価基準」</b>で客観的に標準化。特定の誰かに頼り切らなくても、業務が止まらない形をつくります。</p>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- FEATURES -->
+<section class="feats">
+  <div class="wrap">
+    <div class="sec-lead"><span class="eyebrow">SIRIUSの特長</span></div>
+    <h2 class="big center">単なる代行ではなく、<br>会社の土台になる。</h2>
+    <div class="feat">
+      <div class="item">
+        <div class="num serif">01</div>
+        <div>
+          <div class="ft">必要なときに、必要な分だけ</div>
+          <div class="fd">15分単位で依頼でき、使った分だけのお支払い（従量課金）。“固定の人件費”を、使った分だけの“変動費”に変えられます。</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="num serif">02</div>
+        <div>
+          <div class="ft">急な依頼にも、すばやく</div>
+          <div class="fd">依頼から着手までのリードタイムは最短3日。毎月の維持費は一切かからない、“必要なときに使える人材インフラ”として活用できます。</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="num serif">03</div>
+        <div>
+          <div class="ft">仕組みで、品質を保つ</div>
+          <div class="fd">どの作業にどんなスキルが必要かを見極め、進め方を整理して記録に残します。すべて標準化して進めるため、誰が担当しても同じ手順・同じ品質で。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="rule"></div>
 
 <!-- TRUST -->
-<section class="shift">
-  <div class="wrap reveal">
-    <p class="lbl eyebrow">SIRIUSについて</p>
-    <h2><span class="u">毎月10社</span>だけ、<br>お受けしています。</h2>
-    <p class="sub">「総務に追われる時間を、本業へ取り戻してほしい」。その想いから、一社ずつ、立ち上げから丁寧に向き合っています。</p>
-    <div class="triad">
-      <span>マニュアル不要・PMと一緒に整理</span>
-      <span>NDAで機密保持</span>
-      <span>一社ごとに丁寧に対応</span>
+<section class="trust-sec">
+  <div class="wrap">
+    <div class="sec-lead"><span class="eyebrow">はじめてでも、安心して</span></div>
+    <h2 class="big center">「知らない人に任せて大丈夫？」<br>その不安にこそ、応えます。</h2>
+    <div class="trust">
+      <div class="row">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21a8 8 0 0 0-16 0"/><circle cx="12" cy="8" r="4"/></svg></div>
+        <div><div class="tt">窓口は、専任のPMひとり。</div><div class="td">個々の作業者とやり取りする必要はありません。依頼や相談は、専任のPMに伝えるだけで済みます。</div></div>
+      </div>
+      <div class="row">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h11M4 10h11M4 15h7"/><path d="M17.5 14.5l2 2 3-3.5"/></svg></div>
+        <div><div class="tt">マニュアルは、なくて大丈夫。</div><div class="td">手順書がない状態から、PMがお客様と一緒に業務を一つずつ整理し、記録に残していきます。</div></div>
+      </div>
+      <div class="row">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg></div>
+        <div><div class="tt">経緯も品質も、引き継がれる。</div><div class="td">業務の進め方や過去のやり取りはSIRIUSが記録・管理。担当が代わっても、品質がぶれにくい状態を保ちます。</div></div>
+      </div>
+      <div class="row">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div>
+        <div><div class="tt">機密は、NDAのもとで厳重に。</div><div class="td">お預かりする情報は、秘密保持契約（NDA）のもとで厳重に管理します。“ひとりに集中”の属人化リスクからも解放されます。</div></div>
+      </div>
     </div>
   </div>
 </section>
 
-<div class="divider"></div>
+<div class="rule"></div>
 
-<!-- OPEN LOOP / RISK REVERSAL -->
-<section class="loop">
-  <div class="wrap reveal">
-    <h2>繁忙期や急な退職。<br><b>慌てる前に、登録だけしておきませんか。</b></h2>
-    <p class="sub"><span class="nb">登録は無料・1分で完了。</span><span class="nb">契約期間の縛りも、</span><span class="nb">解約の費用もなく、</span><span class="nb">もしものときの備えになります。</span></p>
-    <div class="triad" style="margin-bottom:34px;">
-      <span>縛りなし・いつでも解約</span>
-      <span>固定費なし・使った分だけ</span>
-      <span>ミスマッチのリスクなし</span>
+<!-- PRICING -->
+<section class="pricing">
+  <div class="wrap">
+    <div class="sec-lead"><span class="eyebrow">料金・ご利用条件</span></div>
+    <h2 class="big center">シンプルで、わかりやすい。</h2>
+    <div class="price">
+      <div class="row hl"><span class="k">ご利用料金</span><span class="v">1時間 3,000円 〜</span></div>
+      <div class="row"><span class="k">最低ご利用</span><span class="v">月10時間<span class="u">から</span></span></div>
+      <div class="row"><span class="k">依頼単位</span><span class="v">15分<span class="u">から</span></span></div>
+      <div class="row"><span class="k">着手まで</span><span class="v">最短3日</span></div>
+      <div class="row"><span class="k">契約</span><span class="v">解約自由<span class="u">・使わない月は停止可</span></span></div>
     </div>
-    <div><span class="scarce"><span class="dot"></span>モニター枠は<b class="hot">毎月10社</b>・先着順</span></div>
+    <p class="price-note">価格の税区分は確定次第、正式にご案内します。</p>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- CLOSING / SCARCITY -->
+<section class="close">
+  <div class="wrap">
+    <div class="sec-lead"><span class="eyebrow">先行登録受付中</span></div>
+    <h2 class="big center">なぜ、毎月10社だけなのか。</h2>
+    <p class="prose col center">SIRIUSは、マニュアルのない状態から、PMがお客様と一緒に業務を一つずつ整理し、記録に残しながら立ち上げます。この<b>丁寧な立ち上げに手間をかける</b>ため、毎月お受けするのは10社まで。2026年7月1日の開始に向けて、先行登録を受け付けています。</p>
+    <div style="margin-top:26px;"><span class="scarce"><span class="dot"></span>毎月10社・先着順</span></div>
     <div><a class="btn btn-primary" href="#register">先行登録する（無料・1分）</a></div>
   </div>
 </section>
@@ -397,10 +400,10 @@
         <div class="ftitle">
           <div class="k">先行登録</div>
           <div class="t">先行登録（無料）</div>
-          <div class="s">モニター枠は毎月10社まで。ご登録いただいた方から、順にご案内します。この時点で、費用や契約は発生しません。</div>
+          <div class="s">毎月10社まで。ご登録いただいた方から、順にご案内します。この時点で、費用や契約は発生しません。</div>
         </div>
         <div class="fg"><label for="email">メールアドレス<span class="req">必須</span></label><input type="email" id="email" name="email" autocomplete="email" required /></div>
-        <p class="opthint">以下は任意です。分かる範囲でけっこうです（メールアドレスだけでも登録できます）。</p>
+        <p class="opthint">以下は任意です。差し支えのない範囲でご記入ください（メールアドレスだけでも登録できます）。</p>
         <div class="fg"><label for="name">お名前（任意）</label><input type="text" id="name" name="name" autocomplete="name" placeholder="例：山田 太郎" /></div>
         <div class="fg"><label for="company">会社名（任意）</label><input type="text" id="company" name="company" autocomplete="organization" /></div>
         <div class="fg"><label for="phone">電話番号（任意）</label><input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="例：03-1234-5678" /></div>
@@ -412,12 +415,12 @@
         </div>
         <div class="fg"><label>依頼を検討中の業務（任意・複数選択可）</label>
           <div class="checks">
-            <label><input type="checkbox" name="tasks" value="入社・退社の手続き" />入社・退社の手続き</label>
-            <label><input type="checkbox" name="tasks" value="備品・消耗品の発注" />備品・消耗品の発注</label>
-            <label><input type="checkbox" name="tasks" value="契約書の確認・管理" />契約書の確認・管理</label>
-            <label><input type="checkbox" name="tasks" value="請求・経費の処理" />請求・経費の処理</label>
-            <label><input type="checkbox" name="tasks" value="勤怠・労務" />勤怠・労務</label>
-            <label><input type="checkbox" name="tasks" value="問い合わせ・電話対応" />問い合わせ・電話対応</label>
+            <label><input type="checkbox" name="tasks" value="社内アンケート・出欠の集計" />社内アンケート・出欠の集計</label>
+            <label><input type="checkbox" name="tasks" value="備品・消耗品のネット発注" />備品・消耗品のネット発注</label>
+            <label><input type="checkbox" name="tasks" value="会議室・日程の調整" />会議室・日程の調整</label>
+            <label><input type="checkbox" name="tasks" value="押印・契約書類の取りまとめ" />押印・契約書類の取りまとめ</label>
+            <label><input type="checkbox" name="tasks" value="慶弔・お祝いの電報手配" />慶弔・お祝いの電報手配</label>
+            <label><input type="checkbox" name="tasks" value="出張・交通の手配" />出張・交通の手配</label>
             <label><input type="checkbox" name="tasks" value="その他" />その他</label>
           </div>
         </div>
@@ -429,7 +432,7 @@
       <div class="reg-done" id="regDone">
         <div class="ck">✓</div>
         <h3>先行登録が完了しました。</h3>
-        <p>ご登録ありがとうございます。モニター枠（毎月10社）から、順にご案内いたします。依頼したい業務が生じた際は、いつでもご相談ください。</p>
+        <p>ご登録ありがとうございます。毎月10社の枠から、順にご案内いたします。依頼したい業務が生じた際は、いつでもご相談ください。</p>
       </div>
     </div>
   </div>
@@ -438,69 +441,22 @@
 <footer class="site">
   <div class="wrap">
     <div class="mark">SIRIUS</div>
-    <div class="co">運営：株式会社ORIGIN</div>
-    <div class="cp">© 2026 Origin Inc. All Rights Reserved.</div>
+    <div class="co-lead">運営会社</div>
+    <div class="company">
+      <div class="row"><span class="k">会社名</span><span class="v">株式会社ORIGIN</span></div>
+      <div class="row"><span class="k">代表</span><span class="v">山本 高之</span></div>
+      <div class="row"><span class="k">所在地</span><span class="v">〒103-0022 東京都中央区日本橋室町1-11-12 7階</span></div>
+      <div class="row"><span class="k">Email</span><span class="v"><a href="mailto:admin@siriusbpo.com">admin@siriusbpo.com</a></span></div>
+      <div class="row"><span class="k">TEL</span><span class="v"><a href="tel:05017928753">050-1792-8753</a></span></div>
+      <div class="row"><span class="k">サイト</span><span class="v"><a href="https://sirius-origin.vercel.app/">sirius-origin.vercel.app</a></span></div>
+    </div>
+    <div class="cp">© 2026 ORIGIN Inc. All Rights Reserved.</div>
   </div>
 </footer>
 
 <div class="sticky-cta"><a href="#register">先行登録する（無料・1分）</a></div>
 
 <script>
-  /* スキル星座ネットワーク（AIによる動的マッチングの視覚化） */
-  (function(){
-    const cv=document.getElementById('net'); if(!cv) return;
-    const ctx=cv.getContext('2d');
-    const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    let W,H,DPR,nodes,stars,raf,sCur=0,sPrev=0,vel=0,t0=performance.now();
-    function size(){ DPR=Math.min(window.devicePixelRatio||1,2); W=cv.width=innerWidth*DPR; H=cv.height=innerHeight*DPR; cv.style.width=innerWidth+'px'; cv.style.height=innerHeight+'px'; }
-    function init(){
-      const n=Math.max(24,Math.min(48,Math.floor(innerWidth/28)));
-      nodes=[]; for(let i=0;i<n;i++){ nodes.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*0.12*DPR,vy:(Math.random()-.5)*0.12*DPR,r:(Math.random()*1.4+0.7)*DPR,ph:Math.random()*6.2832,sp:0.5+Math.random()*1.6}); }
-      const m=Math.max(50,Math.min(130,Math.floor(innerWidth/10)));
-      stars=[]; for(let i=0;i<m;i++){ stars.push({x:Math.random()*W,y:Math.random()*H,depth:0.15+Math.random()*1.3,r:(Math.random()*1.2+0.3)*DPR,ph:Math.random()*6.2832,sp:0.7+Math.random()*2.4,gold:Math.random()<0.26}); }
-    }
-    function drawNetwork(off,t){
-      const maxd=150*DPR;
-      for(let i=0;i<nodes.length;i++){ const a=nodes[i];
-        for(let j=i+1;j<nodes.length;j++){ const b=nodes[j]; const dx=a.x-b.x,dy=a.y-b.y; const d=Math.hypot(dx,dy);
-          if(d<maxd){ const o=(1-d/maxd)*0.15; ctx.strokeStyle='rgba(150,180,235,'+o+')'; ctx.lineWidth=1*DPR; ctx.beginPath(); ctx.moveTo(a.x,a.y+off); ctx.lineTo(b.x,b.y+off); ctx.stroke(); } } }
-      for(const p of nodes){ const tw=0.5+0.5*Math.sin(t*p.sp+p.ph); const a=Math.min(1,0.45+0.5*tw+vel*0.4);
-        ctx.beginPath(); ctx.fillStyle='rgba(227,194,114,'+a+')'; ctx.shadowColor='rgba(227,194,114,.6)'; ctx.shadowBlur=(6+tw*5+vel*9)*DPR; ctx.arc(p.x,p.y+off,p.r*(0.85+tw*0.4),0,6.2832); ctx.fill(); }
-      ctx.shadowBlur=0;
-    }
-    function frame(){
-      const t=(performance.now()-t0)/1000;
-      for(const a of nodes){ a.x+=a.vx; a.y+=a.vy; if(a.x<0||a.x>W)a.vx*=-1; if(a.y<0||a.y>H)a.vy*=-1; }
-      /* スクロール量に緩やかに追従＋スクロール速度を取得（反応の手応え用） */
-      const sTarget=(window.pageYOffset||0)*DPR;
-      sPrev=sCur; sCur+=(sTarget-sCur)*0.085;
-      vel+=(Math.min(1.3,Math.abs(sCur-sPrev)/(42*DPR))-vel)*0.12;
-      ctx.clearRect(0,0,W,H);
-      /* 奥行きパララックス＋明滅する星空（線なし＝星ごとに個別ラップ可） */
-      for(const s of stars){
-        const dispY=((s.y+sCur*s.depth*0.4)%H+H)%H;
-        const dispX=s.x+Math.sin(t*0.3+s.ph)*1.4*DPR;
-        const tw=0.5+0.5*Math.sin(t*s.sp+s.ph);
-        const a=Math.min(0.95,(0.14+0.6*tw+vel*0.55)*(0.4+s.depth*0.5));
-        const rr=s.r*(0.72+tw*0.55+vel*0.6);
-        const col=s.gold?'227,194,114':'200,222,255';
-        ctx.beginPath(); ctx.fillStyle='rgba('+col+','+(a*0.2)+')'; ctx.arc(dispX,dispY,rr*2.6,0,6.2832); ctx.fill();
-        ctx.beginPath(); ctx.fillStyle='rgba('+col+','+a+')'; ctx.arc(dispX,dispY,rr,0,6.2832); ctx.fill();
-      }
-      /* 星座ネットワーク（一様パララックス＋継ぎ目なしタイル） */
-      const off=((sCur*0.16)%H+H)%H;
-      drawNetwork(off,t); drawNetwork(off-H,t);
-      raf=requestAnimationFrame(frame);
-    }
-    function start(){ size(); init(); cancelAnimationFrame(raf);
-      if(reduce){ ctx.clearRect(0,0,W,H);
-        for(const s of stars){ const col=s.gold?'227,194,114':'200,222,255'; ctx.beginPath(); ctx.fillStyle='rgba('+col+',0.5)'; ctx.arc(s.x,s.y,s.r,0,6.2832); ctx.fill(); }
-        drawNetwork(0,0);
-      } else { frame(); } }
-    let rt; window.addEventListener('resize',function(){ clearTimeout(rt); rt=setTimeout(start,200); });
-    start();
-  })();
-
   /* 先行登録フォーム → Web3Forms（メール通知）。会社名・従業員数も送信メールに載る。 */
   const W3F_KEY = "be69f24c-92b3-4d68-b7de-022c53e79158"; // 公開可（送信をメールに届ける宛先ID。秘密鍵ではない）
   const W3F_ENDPOINT = "https://api.web3forms.com/submit";
@@ -552,6 +508,8 @@
     form.style.display='none'; done.classList.add('show');
     done.scrollIntoView({behavior:'smooth',block:'center'});
   });
+
+  /* スクロールでフォーム欄をふわっと表示 */
   const io=new IntersectionObserver((es)=>{es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:0.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
