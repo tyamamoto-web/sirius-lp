@@ -4,9 +4,9 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>SIRIUS｜中小企業のための総務アウトソーシング｜2026年7月1日開始・先行登録受付中</title>
-<meta name="description" content="SIRIUS（シリウス）は、中小企業の総務・バックオフィス業務を、必要なときに必要な分だけ支援する総務アウトソーシングです。総務を小さなタスクに分け、得意な人へ配置（スキルベース）。窓口は専任PM。月10時間・1時間3,000円から、解約自由。2026年7月1日開始、毎月10社限定で先行登録受付中。運営：株式会社ORIGIN。" />
+<meta name="description" content="SIRIUS（シリウス）は、中小企業の総務・バックオフィス業務を、必要なときに必要な分だけ支援する総務アウトソーシング（事務代行）です。総務を小さなタスクに分け、スキルに応じて最適な人材を配置します（スキルベース）。窓口は専任のPM。月10時間・1時間3,000円（税込）から、解約自由。2026年7月1日開始、毎月10社限定で先行登録を受付中。運営：株式会社ORIGIN。" />
 <meta property="og:title" content="SIRIUS｜中小企業のための総務アウトソーシング" />
-<meta property="og:description" content="人を雇うほどじゃない、でも人手が足りない総務を、必要な分だけプロに。月10時間・1時間3,000円から、解約自由。2026年7月1日開始・先行登録受付中（毎月10社限定）。運営：株式会社ORIGIN。" />
+<meta property="og:description" content="専任を雇うほどではないが人手が足りない総務を、必要なときに必要な分だけ専門スタッフが支援します。月10時間・1時間3,000円（税込）から、解約自由。2026年7月1日開始・先行登録受付中（毎月10社限定）。運営：株式会社ORIGIN。" />
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="ja_JP" />
 
@@ -63,7 +63,7 @@
   .hero{padding:72px 0 66px;text-align:center;}
   .hero .eyebrow{margin-bottom:26px;}
   .hero h1{font-size:clamp(2rem,5.2vw,3rem);line-height:1.5;margin-bottom:26px;font-weight:600;}
-  .hero .sub{font-size:1.04rem;color:var(--sub);font-weight:400;max-width:33em;margin:0 auto 30px;line-height:2;}
+  .hero .sub{font-size:1.04rem;color:var(--sub);font-weight:400;max-width:34em;margin:0 auto 30px;line-height:2;}
   .facts{display:flex;justify-content:center;flex-wrap:wrap;gap:0;margin:0 auto 34px;max-width:36em;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
   .facts div{flex:1 1 0;min-width:120px;padding:16px 10px;}
   .facts div+div{border-left:1px solid var(--line);}
@@ -98,7 +98,7 @@
   .lossfig .cap{fill:var(--faint);font-size:12px;letter-spacing:.04em;}
   .loss-src{font-size:.7rem;color:var(--faint);margin-top:14px;line-height:1.7;text-align:left;}
 
-  /* before / after (skill-based) */
+  /* before / after cards */
   .ba{display:flex;gap:16px;margin:34px auto 0;max-width:40em;align-items:stretch;}
   .ba .card{flex:1 1 0;min-width:0;border:1px solid var(--line-2);border-radius:4px;padding:22px 20px;background:var(--paper-2);}
   .ba .card.now{background:var(--wash);}
@@ -108,6 +108,38 @@
   .ba .card.aft .t{color:var(--navy);}
   .ba-arrow{display:flex;align-items:center;color:var(--gold);flex:0 0 auto;}
   .ba-arrow svg{width:22px;height:22px;}
+
+  /* figures / diagrams */
+  .figcap{font-size:.74rem;color:var(--faint);letter-spacing:.02em;text-align:center;margin:16px auto 0;max-width:38em;line-height:1.8;}
+  /* 3-step flow (skill-based mechanism) */
+  .flow{display:flex;align-items:stretch;gap:12px;margin:36px auto 0;max-width:47em;}
+  .flow .step{flex:1 1 0;min-width:0;border:1px solid var(--line-2);border-radius:4px;background:var(--paper-2);padding:20px 16px;text-align:center;display:flex;flex-direction:column;}
+  .flow .step .sn{font-size:.66rem;letter-spacing:.16em;color:var(--gold);margin-bottom:9px;}
+  .flow .step .sh{font-family:"Noto Serif JP",serif;font-size:.98rem;font-weight:600;color:var(--ink);margin-bottom:12px;line-height:1.5;}
+  .flow .step.em{background:var(--wash);}
+  .flow .step.em .sh{color:var(--navy);}
+  .flow .parts{display:flex;flex-wrap:wrap;gap:5px;justify-content:center;margin-top:auto;}
+  .flow .parts span{font-size:.7rem;color:var(--sub);border:1px solid var(--line);border-radius:3px;padding:4px 8px;background:var(--paper);}
+  .flow .step.em .parts span{color:var(--navy);border-color:var(--line-2);}
+  .flow .arw{display:flex;align-items:center;color:var(--gold);flex:0 0 auto;}
+  .flow .arw svg{width:20px;height:20px;}
+  /* mismatch (2 columns + gap) */
+  .mis{display:flex;align-items:stretch;gap:10px;margin:30px auto 0;max-width:47em;}
+  .mis .side{flex:1 1 0;min-width:0;border:1px solid var(--line-2);border-radius:4px;padding:18px 16px;background:var(--paper-2);}
+  .mis .side.slack{background:var(--wash);}
+  .mis .side .mh{font-size:.82rem;font-weight:600;color:var(--ink);margin-bottom:12px;text-align:center;line-height:1.55;}
+  .mis .mchip{font-size:.74rem;color:var(--sub);border:1px solid var(--line);border-radius:3px;padding:6px 10px;margin:6px 0;display:block;background:var(--paper);text-align:center;}
+  .mis .mid{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--gold);width:66px;text-align:center;}
+  .mis .mid svg{width:26px;height:26px;margin-bottom:6px;}
+  .mis .mid span{font-size:.66rem;line-height:1.5;color:var(--gold);}
+  /* service flow (vertical steps + PM bar) */
+  .svc{max-width:40em;margin:32px auto 0;}
+  .svc .sstep{display:flex;gap:16px;padding:15px 0;border-top:1px solid var(--line);align-items:flex-start;}
+  .svc .sstep:last-of-type{border-bottom:1px solid var(--line);}
+  .svc .sn{font-family:"Noto Serif JP",serif;font-size:1.05rem;font-weight:600;color:var(--gold);flex:0 0 auto;min-width:1.9rem;line-height:1.5;}
+  .svc .st{font-weight:500;color:var(--ink);font-size:.95rem;margin-bottom:3px;}
+  .svc .sd{font-size:.85rem;color:var(--sub);line-height:1.8;}
+  .svc-pm{max-width:40em;margin:16px auto 0;border:1px solid var(--navy);border-radius:4px;background:var(--wash);padding:15px 18px;text-align:center;font-size:.9rem;color:var(--navy);font-weight:500;line-height:1.75;}
 
   /* features (numbered) */
   .feat{max-width:42em;margin:34px auto 0;}
@@ -200,6 +232,10 @@
     h2.big{font-size:1.4rem;}
     .ba{flex-direction:column;}
     .ba-arrow{justify-content:center;transform:rotate(90deg);}
+    .flow{flex-direction:column;}
+    .flow .arw{justify-content:center;transform:rotate(90deg);}
+    .mis{flex-direction:column;}
+    .mis .mid{width:auto;padding:4px 0;}
     .feat .item{gap:16px;}
     .sticky-cta{display:block;}
     footer.site .wrap{padding-bottom:84px;}
@@ -226,15 +262,15 @@
 <section class="hero">
   <div class="wrap">
     <span class="eyebrow">中小企業のための総務アウトソーシング ／ 2026年7月1日 開始</span>
-    <h1>総務は、<br>「必要なときに、必要な分だけ」。</h1>
-    <p class="sub">「人を雇うほどじゃない、でも人手が足りない」。そんな総務を、<b>必要なときに、必要な分だけ</b>プロに。多くの事務代行のように“月◯◯時間”を提供側の都合で固定せず、使った分だけ。総務の仕事を小さなタスクに分け、それぞれ得意な人へ配置し、窓口は専任のPM（プロジェクトマネージャー）がまとめて引き受けます。</p>
+    <h1>総務を、必要なときに、<br>必要な分だけ。</h1>
+    <p class="sub">「専任を雇うほどではないが、人手は足りない」。そうした総務を、<b>必要なときに必要な分だけ</b>、専門のスタッフが支援いたします。多くの事務代行のように月あたりの利用時間を提供側の都合で固定することはなく、ご利用いただいた分だけのご負担です。窓口は専任のPM（プロジェクトマネージャー）が一手に引き受けます。</p>
     <div class="facts">
       <div><div class="n">月10時間〜</div><div class="l">最低ご利用</div></div>
       <div><div class="n">3,000円<span style="font-size:.8rem;font-weight:400">／時</span></div><div class="l">ご利用料金（税込）</div></div>
-      <div><div class="n">解約自由</div><div class="l">使わない月は停止可</div></div>
+      <div><div class="n">解約自由</div><div class="l">ご利用のない月は停止可</div></div>
     </div>
-    <a class="btn btn-primary" href="#register">先行登録する（無料・1分）</a>
-    <p class="note">2026年7月1日サービス開始。一社ずつ丁寧に立ち上げるため、<b>毎月10社・先着順</b>で先行登録を受け付けています。</p>
+    <a class="btn btn-primary" href="#register">先行登録する（無料・約1分で完了）</a>
+    <p class="note">2026年7月1日にサービスを開始いたします。一社ずつ確実に導入を進めるため、<b>毎月10社・先着順</b>で先行登録を承っております。</p>
   </div>
 </section>
 
@@ -243,9 +279,9 @@
 <!-- PROBLEM -->
 <section class="recog">
   <div class="wrap">
-    <div class="sec-lead"><span class="eyebrow">経営者の、見えない負担</span></div>
-    <h2 class="big center">その総務、いつのまにか<br>あなたの時間を奪っていませんか。</h2>
-    <p class="prose col center">契約書づくり、請求・経費の処理、データ入力、問い合わせ対応——専任を雇うほどではないけれど、放ってもおけない。こうした<b>「名もなき総務」</b>が、社長や社員の本業の時間を、少しずつ削っていきます。</p>
+    <div class="sec-lead"><span class="eyebrow">経営者が抱える、見えない負担</span></div>
+    <h2 class="big center">その総務業務が、本業に充てる<br>時間を圧迫していないでしょうか。</h2>
+    <p class="prose col center">契約書の作成、請求・経費の処理、データ入力、問い合わせ対応。専任を雇うほどの分量ではない一方で、放置もできません。こうした<b>「名もなき総務」</b>が、経営者や社員が本業に充てるべき時間を、少しずつ奪っていきます。</p>
     <div class="tasks">
       <div class="task"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a3 3 0 0 0-3 3c0 1.6 1.2 2.2 1.2 3.6 0 .9-.7 1.4-1.7 1.4h7c-1 0-1.7-.5-1.7-1.4 0-1.4 1.2-2 1.2-3.6a3 3 0 0 0-3-3z"/><rect x="4.5" y="14.5" width="15" height="3" rx="1"/><path d="M4.5 20.5h15"/></svg><span>契約書のチェック・取りまとめ</span></div>
       <div class="task"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="11" rx="2"/><path d="M9 8V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><path d="M10 12v3M14 12v3"/></svg><span>請求・経費の処理</span></div>
@@ -253,10 +289,10 @@
       <div class="task"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6 8.5-6"/></svg><span>問い合わせ対応</span></div>
       <div class="task"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17"/><path d="M8 3v3M16 3v3"/></svg><span>会議室・日程の調整</span></div>
       <div class="task"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/><path d="M2.5 4H5l2.2 11.1a1.5 1.5 0 0 0 1.5 1.2h7.6a1.5 1.5 0 0 0 1.5-1.2L20.5 7.5H6"/></svg><span>備品・消耗品のネット発注</span></div>
-      <div class="task more">ほかにも、数えきれず…</div>
+      <div class="task more">そのほかにも数多くあります</div>
     </div>
     <div class="loss">
-      <p class="loss-lead">その積み重ねは、<b>毎月およそ12.4万円</b>もの見えないコストになりかねません。<span class="est">※以下は、一定の前提に基づく当社試算です。</span></p>
+      <p class="loss-lead">その積み重ねは、<b>毎月およそ12.4万円</b>の見えないコストとなるおそれがあります。<span class="est">※以下は、一定の前提に基づく当社試算です。</span></p>
       <svg class="lossfig" viewBox="0 0 600 250" role="img" aria-label="放置した場合の累積損失の試算。1年で約149万円、3年で約447万円、5年で約745万円。">
         <text class="cap" x="52" y="18" text-anchor="start">放置した場合の累積損失（試算）</text>
         <line x1="52" y1="206" x2="548" y2="206" stroke="#D9D3C4" stroke-width="1"/>
@@ -281,22 +317,22 @@
 <section class="diff">
   <div class="wrap">
     <div class="sec-lead"><span class="eyebrow">SIRIUSの違い</span></div>
-    <h2 class="big center">SIRIUSは、時間を「固定」しません。</h2>
-    <p class="prose col center">SIRIUSは、総務を、固定で決まった時間まとめて引き受けるのではなく、お客様が本当に必要とする作業を、<b>必要な時間だけ</b>支援します。</p>
+    <h2 class="big center">SIRIUSは、ご利用時間を<br>固定いたしません。</h2>
+    <p class="prose col center">SIRIUSは、総務業務を固定された時間でまとめて引き受けるのではなく、お客様が実際に必要とされる作業を、<b>必要な時間だけ</b>支援いたします。その結果、社長も現場も、本業に集中できる時間を取り戻せます。</p>
     <div class="ba">
       <div class="card now">
         <div class="h">多くの事務代行（BPO）</div>
-        <div class="t">「月◯◯時間」を、まとめて契約</div>
-        <p>あらかじめ時間数を契約する形。その時間数は提供側の都合で決まりがちで、実際に必要な量とずれてしまうことも少なくありません。</p>
+        <div class="t">「月あたりの時間」を、まとめて契約</div>
+        <p>あらかじめ利用時間数を契約する方式です。その時間数は提供側の都合で決まりがちで、実際に必要な量と乖離することも少なくありません。</p>
       </div>
       <div class="ba-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
       <div class="card aft">
         <div class="h">SIRIUS</div>
-        <div class="t">時間を固定せず、必要な分だけ</div>
-        <p>こちらの都合で時間を固定しません。お客様の状況に合わせ、必要なときに必要な分だけ。使わない月は、停止・解約も可能です。</p>
+        <div class="t">ご利用時間を固定せず、必要な分だけ</div>
+        <p>当社の都合で時間を固定することはありません。お客様の状況に合わせ、必要なときに必要な分だけご利用いただけます。ご利用のない月は、停止・解約も可能です。</p>
       </div>
     </div>
-    <p class="prose col center" style="margin-top:28px;">業務の進め方を整理して記録に残していくため、外部に任せきりにならず、特定の人に頼らなくても安定して続けられる——そのような整った状態が、会社の中に積み上がっていきます。</p>
+    <p class="prose col center" style="margin-top:28px;">業務の進め方を整理し、記録として残してまいりますので、外部への任せきりを避け、特定の担当者に依存せずとも安定して継続できます。こうして整備された状態が、貴社の内部に蓄積されていきます。</p>
   </div>
 </section>
 
@@ -306,12 +342,31 @@
 <section class="why">
   <div class="wrap">
     <div class="sec-lead"><span class="eyebrow">SIRIUSの背景</span></div>
-    <h2 class="big center">なぜいま、「スキル単位」で<br>総務を支えるのか。</h2>
-    <p class="prose col center">決まった手順をくり返す定型的な作業やデータの入力・転記、決まった形式の書類づくりや集計は、さまざまなツールやサービスの普及によって、以前より少ない手間でこなせるようになってきました。代わりに価値が高まっているのは、<b>「いま何をすべきかを自分で考え、状況の変化に合わせて段取りする」仕事</b>です。</p>
-    <p class="prose col center" style="margin-top:20px;">「人手が足りない」という声は、あらゆる業種で聞かれます。けれど実態をよく見ると、問題は単純な“人数”だけではありません。一方では定型作業から手が空いた社員がいて、もう一方では、<b>インボイス制度や電子帳簿保存法</b>といった新しい制度への対応、増えていく問い合わせ対応など、その場の判断や専門的な知識が求められる仕事に人手が足りない。データ入力を正確にこなせることと、込み入った問い合わせに的確に答えられることは、別の能力です。</p>
-    <p class="prose col center" style="margin-top:20px;">つまり、人の数は足りているのに、<b>必要なスキルが、必要な場所に届いていない</b>。この“社内の仕事とスキルのミスマッチ”こそ、いま多くの企業が抱える、見えにくい停滞の正体だと私たちは考えています。</p>
-    <p class="prose col center" style="margin-top:20px;">この問題は、中小企業ほど深刻になりがちです。総務だけに専念できる担当者を雇う余裕がなく、一人が経理も労務も庶務も…と幅広く抱え込む。すると「そのやり方は〇〇さんしか知らない」という<b>属人化</b>が起こり、その人が辞めたり休んだりすると、とたんに業務が止まってしまいます。</p>
-    <p class="prose col center" style="margin-top:20px;">その本質は、多くの会社が、仕事を「人」や「役職」に紐づけて抱えていること。だからいま、人と仕事を「人」や「役職」ではなく<b>「できること（スキル）」の単位でとらえ直す</b>——“スキルベース”という考え方が注目されています。</p>
+    <h2 class="big center">いま「スキル単位」で<br>総務を支える理由。</h2>
+    <p class="prose col center">決まった手順をくり返す定型的な作業やデータの入力・転記、決まった形式の書類づくりや集計は、さまざまなツールやサービスの普及により、以前より少ない手間でこなせるようになりました。代わりに価値が高まっているのは、<b>「いま何をすべきかを自分で考え、状況の変化に合わせて段取りする」仕事</b>です。</p>
+    <p class="prose col center" style="margin-top:20px;">「人手が足りない」という声は、あらゆる業種で聞かれます。しかし実態を精査すると、問題は単純な人数だけではありません。一方では定型作業から手が空いた社員がおり、他方では、<b>インボイス制度や電子帳簿保存法</b>といった新しい制度への対応、増加する問い合わせ対応など、その場の判断や専門的な知識が求められる仕事に人手が足りていません。データ入力を正確にこなせることと、込み入った問い合わせに的確に答えられることは、別の能力です。</p>
+    <div class="mis">
+      <div class="side slack">
+        <div class="mh">手が空く<br><span style="font-weight:400;color:var(--sub);font-size:.74rem;">（定型作業の負担が減る）</span></div>
+        <span class="mchip">データ入力・転記</span>
+        <span class="mchip">定型的な集計</span>
+        <span class="mchip">決まった形式の書類</span>
+      </div>
+      <div class="mid">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17H7A5 5 0 0 1 7 7h2"/><path d="M15 7h2a5 5 0 0 1 0 10h-2"/><path d="M8.5 12h2.5M15.5 12H13"/></svg>
+        <span>スキルが<br>届かない</span>
+      </div>
+      <div class="side">
+        <div class="mh">人手が足りない<br><span style="font-weight:400;color:var(--sub);font-size:.74rem;">（判断・専門知識が要る）</span></div>
+        <span class="mchip">インボイス制度への対応</span>
+        <span class="mchip">電子帳簿保存法への対応</span>
+        <span class="mchip">増える問い合わせ対応</span>
+      </div>
+    </div>
+    <p class="figcap">人員の数は足りていても、必要なスキルが必要な場所に行き届かない。これが「社内の仕事とスキルの不一致（ミスマッチ）」です。</p>
+    <p class="prose col center" style="margin-top:26px;">人員の数は足りているにもかかわらず、<b>必要なスキルが、必要な場所に行き届いていない</b>。この社内における業務とスキルの不一致こそ、多くの企業が抱える見えにくい停滞の要因であると当社は考えております。</p>
+    <p class="prose col center" style="margin-top:20px;">この問題は、中小企業ほど深刻になりがちです。総務に専念できる担当者を雇う余裕がなく、一人が経理・労務・庶務まで幅広く抱え込みがちです。その結果、「その進め方は特定の担当者しか把握していない」という<b>属人化</b>が生じ、その担当者が離職・休職した途端に、業務が停止してしまいます。</p>
+    <p class="prose col center" style="margin-top:20px;">その本質は、多くの企業が業務を「人」や「役職」に紐づけて抱えている点にあります。そのため近年、人と業務を「人」や「役職」ではなく<b>「できること（スキル）」の単位でとらえ直す</b>「スキルベース」という考え方が注目されています。</p>
   </div>
 </section>
 
@@ -321,22 +376,42 @@
 <section class="shift">
   <div class="wrap">
     <div class="sec-lead"><span class="eyebrow">SIRIUSの考え方</span></div>
-    <h2 class="big center">「総務は、この人」を、やめる。</h2>
-    <p class="prose col center">これまで総務は、一人の担当者に丸ごと任せるのが当たり前でした。けれど、その人が休めば・辞めれば止まってしまう。<b>特定の人に業務が偏る“属人化”</b>のリスクが残ります。</p>
+    <h2 class="big center">「総務は特定の一人」という<br>前提を、見直す。</h2>
+    <p class="prose col center">これまで総務は、一人の担当者にすべてを任せるのが一般的でした。しかし、総務の業務は複雑化・多様化し、求められる専門性も年々高まっております。こうしたなかで、幅広い業務のすべてをお一人の担当者が背負い続けることには、どうしても無理が生じます。特定の担当者に業務が偏る属人化のリスクも残ります。</p>
     <div class="ba">
       <div class="card now">
         <div class="h">これまで</div>
-        <div class="t">総務を、ひとりに集約</div>
-        <p>経理も労務も庶務も、特定の担当者へ。「あの人しか分からない」が生まれ、休む・辞めるで止まる。</p>
+        <div class="t">総務を、一人に集約</div>
+        <p>請求書の作成から契約書の確認、データ入力、問い合わせ対応まで、幅広い業務を特定の“頼れる一人”に集約します。「その担当者しか把握していない」状態が生まれ、休職・離職により業務が停止します。</p>
       </div>
       <div class="ba-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
       <div class="card aft">
         <div class="h">SIRIUS</div>
-        <div class="t">タスク×スキルで、分担</div>
-        <p>仕事を小さなタスクに分け、得意な人へ配置。厚労省の公的基準で標準化するから、担当が代わっても同じ品質。</p>
+        <div class="t">タスクとスキルで、分担</div>
+        <p>業務を小さなタスクに分け、それぞれ最も適した人材へ配置します。厚生労働省の公的基準に沿って標準化するため、担当が代わっても同一の品質を保ちます。</p>
       </div>
     </div>
-    <p class="prose col center" style="margin-top:28px;">仕事を「人」や「役職」ではなく、「できること（スキル）」の単位でとらえ直す——この考え方を<b>「スキルベース」</b>と呼びます。総務の仕事を小さなタスクに分解し、各タスクに必要なスキルを見極めて、その作業が得意な人を割り当てる。<b>一枚の絵を組み上げるジグソーパズルのように</b>、チームで分担して仕上げていきます。特定の一人にすべてを背負わせないため、誰かが休んでも辞めても、業務は止まりません。スキルは、厚生労働省の公的指標<b>「職業能力評価基準」</b>で客観的に標準化しています。</p>
+    <div class="flow">
+      <div class="step">
+        <div class="sn">STEP 1</div>
+        <div class="sh">総務の仕事</div>
+        <div class="parts"><span>契約書の確認</span><span>請求・経費</span><span>データ入力</span><span>問い合わせ</span></div>
+      </div>
+      <div class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <div class="step">
+        <div class="sn">STEP 2</div>
+        <div class="sh">小さなタスクに分解<br>（ユニット化）</div>
+        <div class="parts"><span>タスク</span><span>タスク</span><span>タスク</span><span>タスク</span></div>
+      </div>
+      <div class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      <div class="step em">
+        <div class="sn">STEP 3</div>
+        <div class="sh">得意な人へ配置<br>（適所適材）</div>
+        <div class="parts"><span>適した人材</span><span>適した人材</span><span>適した人材</span><span>適した人材</span></div>
+      </div>
+    </div>
+    <p class="figcap">各タスクに必要なスキルを、厚生労働省「職業能力評価基準」に沿って見極め、その作業を得意とする人材へ配置します。特定の一人に負担が集中しないため、担当者の休職・離職があっても業務は止まりません。</p>
+    <p class="prose col center" style="margin-top:28px;">業務を「人」や「役職」ではなく「できること（スキル）」の単位でとらえ直す。この考え方を<b>「スキルベース」</b>と呼びます。総務の仕事を、短時間で完了する小さなタスク単位にまで細かく分解し（ユニット化）、各タスクにどのような“できること（スキル）”や遂行基準（コンピテンシー）が求められるかを、厚生労働省の公的指標<b>「職業能力評価基準」</b>に沿って見極めます。そのうえで、その作業を最も得意とする人材を割り当てる。<b>一枚の絵を組み上げるジグソーパズルのように</b>、チームで分担して仕上げてまいります。従来の「人に仕事を割り当てる（適材適所）」という発想を反転させ、まず作業を定め、その作業にふさわしい人材を配置する。この<b>「適所適材」</b>の考え方により、特定の一人への依存を解きほぐし、担当者の休職・離職があっても業務は停止いたしません。</p>
   </div>
 </section>
 
@@ -346,8 +421,8 @@
 <section class="philosophy">
   <div class="wrap">
     <div class="sec-lead"><span class="eyebrow">SIRIUS という名前</span></div>
-    <h2 class="big center">社名に込めた、6つの設計思想。</h2>
-    <p class="prose col center">SIRIUS（シリウス）は、夜空でいちばん明るい星の名。同時に、私たちがこのサービスに込めた<b>6つの設計思想の頭文字</b>でもあります。その先頭にあるのが、サービスの根幹をなす<b>「Skill-based（スキルベース）」</b>です。</p>
+    <h2 class="big center">サービス名に込めた、<br>6つの設計思想。</h2>
+    <p class="prose col center">SIRIUS（シリウス）は、夜空で最も明るい星の名であり、同時に当社が本サービスに込めた<b>6つの設計思想の頭文字</b>でもあります。その先頭にあるのが、サービスの根幹をなす<b>「Skill-based（スキルベース）」</b>です。</p>
     <div class="feat">
       <div class="item">
         <div class="num serif">S</div>
@@ -401,27 +476,28 @@
 <section class="feats">
   <div class="wrap">
     <div class="sec-lead"><span class="eyebrow">SIRIUSの特長</span></div>
-    <h2 class="big center">単なる代行ではなく、<br>会社の土台になる。</h2>
+    <h2 class="big center">単なる代行にとどまらず、<br>企業の土台となる。</h2>
+    <p class="prose col center">SIRIUSは、単なる業務代行にとどまらず、会社の経営基盤そのものを強くする仕組みでございます。次の3つを柱としております。</p>
     <div class="feat">
       <div class="item">
         <div class="num serif">01</div>
         <div>
           <div class="ft">必要なときに、必要な分だけ</div>
-          <div class="fd">15分単位で依頼でき、使った分だけのお支払い（従量課金）。“固定の人件費”を、使った分だけの“変動費”に変えられます。</div>
+          <div class="fd">15分単位でご依頼いただけ、ご利用分に応じたお支払い（従量課金）となります。正社員を雇用するような固定の人件費をかけることなく、必要なときにだけ外部の専門的な力をご活用いただけます。</div>
         </div>
       </div>
       <div class="item">
         <div class="num serif">02</div>
         <div>
-          <div class="ft">急な依頼にも、すばやく</div>
-          <div class="fd">何が起きるか読みにくい総務業務でも、依頼から着手までのリードタイムは最短3日。毎月の維持費は一切かからない、“必要なときに使える人材インフラ”として活用できます。</div>
+          <div class="ft">急な依頼にも、迅速に対応</div>
+          <div class="fd">何が起きるか読みにくい総務業務でも、ご依頼から着手までのリードタイムは最短3日です。毎月の維持費が一切かからない、必要なときに活用できる人材リソースの基盤としてご利用いただけます。</div>
         </div>
       </div>
       <div class="item">
         <div class="num serif">03</div>
         <div>
-          <div class="ft">仕組みで、品質を保つ</div>
-          <div class="fd">どの作業にどんなスキルが必要かを見極め、進め方を整理して記録に残します。すべて標準化して進めるため、誰が担当しても同じ手順・同じ品質で。</div>
+          <div class="ft">仕組みで、品質を担保</div>
+          <div class="fd">どの作業にどのようなスキルが必要かを見極め、進め方を整理して記録に残します。すべてを標準化して進めるため、どなたが担当しても同一の手順・同一の品質で遂行し、安心して任せ続けていただけます。</div>
         </div>
       </div>
     </div>
@@ -434,26 +510,44 @@
 <section class="trust-sec">
   <div class="wrap">
     <div class="sec-lead"><span class="eyebrow">はじめてでも、安心して</span></div>
-    <h2 class="big center">「知らない人に任せて大丈夫？」<br>その不安にこそ、応えます。</h2>
+    <h2 class="big center">「よく知らない相手に任せて<br>問題ないか」。その不安にお応えします。</h2>
     <div class="trust">
       <div class="row">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21a8 8 0 0 0-16 0"/><circle cx="12" cy="8" r="4"/></svg></div>
-        <div><div class="tt">窓口は、専任のPMひとり。</div><div class="td">個々の作業者とやり取りする必要はありません。依頼や相談は、専任のPMに伝えるだけで済みます。</div></div>
+        <div><div class="tt">窓口は、専任のPMに一本化。</div><div class="td">お客様とのやり取りは、専任のPMが一手にお引き受けいたします。個々の作業者と直接やり取りされたり、ご依頼のたびに一から事情をご説明し直されたりする必要はありません。ご依頼やご相談は、専任のPMにお伝えいただくだけで完結いたします。</div></div>
       </div>
       <div class="row">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h11M4 10h11M4 15h7"/><path d="M17.5 14.5l2 2 3-3.5"/></svg></div>
-        <div><div class="tt">マニュアルは、なくて大丈夫。</div><div class="td">手順書がない状態から、PMがお客様と一緒に業務を一つずつ整理し、記録に残していきます。</div></div>
+        <div><div class="tt">マニュアルがなくても、対応可能。</div><div class="td">手順書やマニュアルがない状態からでも、PMがお客様とともに業務を一つずつ整理し、記録として残してまいります。大切な業務を安心してお任せいただける形に整えながら、無理のないペースでお引き受けいたします。</div></div>
       </div>
       <div class="row">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg></div>
-        <div><div class="tt">経緯も品質も、引き継がれる。</div><div class="td">業務の進め方や過去のやり取りはSIRIUSが記録・管理。担当が代わっても、品質がぶれにくい状態を保ちます。</div></div>
+        <div><div class="tt">経緯も品質も、確実に引き継ぐ。</div><div class="td">業務の進め方や過去のやり取りは、SIRIUSが記録・管理いたします。担当が代わっても、品質が安定した状態を維持します。</div></div>
       </div>
       <div class="row">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div>
-        <div><div class="tt">機密は、NDAのもとで厳重に。</div><div class="td">お預かりする情報は、秘密保持契約（NDA）のもとで厳重に管理します。“ひとりに集中”の属人化リスクからも解放されます。</div></div>
+        <div><div class="tt">機密は、NDAのもとで厳重に管理。</div><div class="td">お預かりする情報は、秘密保持契約（NDA）のもとで厳重に管理いたします。特定の一人に業務が集中する属人化のリスクからも解放されます。</div></div>
       </div>
     </div>
-    <p class="prose col center" style="margin-top:32px;">そして“スキルベース”で仕事と人を結びつけるうえで欠かせないのが、「スキルとは何か」を客観的に定義することです。ものさしが人によってバラバラでは、誰に任せるかで品質がぶれてしまいます。だからSIRIUSは、スキルを主観ではなく客観的なものさし——厚生労働省が整備する公的指標<b>「職業能力評価基準」</b>でとらえます。公的な基準に沿って標準化することで、担当が代わっても同じ品質を保てる、再現性のある支援を目指します。</p>
+    <p class="prose col center" style="margin-top:32px;">そしてスキルベースで業務と人を結びつけるうえで欠かせないのが、「スキルとは何か」を客観的に定義することです。基準が担当者ごとに異なれば、誰に任せるかによって品質が左右されてしまいます。そのためSIRIUSは、スキルを主観ではなく客観的な基準、すなわち厚生労働省が整備する公的指標<b>「職業能力評価基準」</b>に基づいてとらえます。公的な基準に沿って標準化することで、担当が代わっても同じ品質を保てる、再現性のある支援を目指します。</p>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- SERVICE FLOW -->
+<section class="process">
+  <div class="wrap">
+    <div class="sec-lead"><span class="eyebrow">ご利用の流れ</span></div>
+    <h2 class="big center">ご相談から納品まで、<br>すべてPMが伴走します。</h2>
+    <div class="svc">
+      <div class="sstep"><div class="sn">1</div><div><div class="st">ご相談</div><div class="sd">ご依頼内容を、専任のPMにお伝えいただきます。</div></div></div>
+      <div class="sstep"><div class="sn">2</div><div><div class="st">PMが業務を整理</div><div class="sd">マニュアルがない状態からでも、PMがお客様とともに進め方を一つずつ確認します。</div></div></div>
+      <div class="sstep"><div class="sn">3</div><div><div class="st">タスクに分解し、得意な人へ配置</div><div class="sd">業務を小さなタスクに分け、それぞれ最も適した人材へ割り当てます。</div></div></div>
+      <div class="sstep"><div class="sn">4</div><div><div class="st">記録・標準化</div><div class="sd">進め方を記録に残し、厚生労働省の公的基準に沿って標準化します。</div></div></div>
+      <div class="sstep"><div class="sn">5</div><div><div class="st">納品・引き継ぎ</div><div class="sd">担当が代わっても、経緯と品質はそのまま引き継がれます。</div></div></div>
+    </div>
+    <div class="svc-pm">これらすべての工程を通じて、専任のPMが窓口を一手に引き受けます。お客様が個々の作業者と直接やり取りされる必要はありません。</div>
   </div>
 </section>
 
@@ -463,15 +557,15 @@
 <section class="pricing">
   <div class="wrap">
     <div class="sec-lead"><span class="eyebrow">料金・ご利用条件</span></div>
-    <h2 class="big center">シンプルで、わかりやすい。</h2>
+    <h2 class="big center">明快な料金と、ご利用条件。</h2>
     <div class="price">
       <div class="row hl"><span class="k">ご利用料金</span><span class="v">1時間 3,000円（税込）<span class="u">〜</span></span></div>
       <div class="row"><span class="k">最低ご利用</span><span class="v">月10時間<span class="u">から</span></span></div>
       <div class="row"><span class="k">依頼単位</span><span class="v">15分<span class="u">から</span></span></div>
       <div class="row"><span class="k">着手まで</span><span class="v">最短3日</span></div>
-      <div class="row"><span class="k">契約</span><span class="v">解約自由<span class="u">・使わない月は停止可</span></span></div>
+      <div class="row"><span class="k">契約</span><span class="v">解約自由<span class="u">・ご利用のない月は停止可</span></span></div>
     </div>
-    <p class="price-note">表示価格はすべて税込です。月々の固定費はなく、使わない月は費用がかかりません。</p>
+    <p class="price-note">表示価格はすべて税込です。月々の固定費はなく、ご利用のない月は費用が発生いたしません。</p>
   </div>
 </section>
 
@@ -481,8 +575,8 @@
 <section class="vision">
   <div class="wrap">
     <div class="sec-lead"><span class="eyebrow">SIRIUSが目指すもの</span></div>
-    <h2 class="big center">目指すのは、「自社で回せる」状態です。</h2>
-    <p class="prose col center">SIRIUSは、ただ作業を代行し続けるためのサービスではありません。業務の進め方を整理し、記録に残していくことで、外部に任せきりにならず、<b>いずれはお客様の会社が、自分たちで回せる状態へ</b>。その土台づくりを支えます。2026年7月1日に始まった総務アウトソーシング『SIRIUS』は、あなたの会社が「自社で回せる」状態をつくるパートナーです。</p>
+    <h2 class="big center">目指すのは、<br>「自社で運用できる」状態です。</h2>
+    <p class="prose col center">SIRIUSは、ただ作業を代行し続けるためのサービスではありません。業務の進め方を整理し、記録に残していくことで、外部への任せきりを避け、<b>いずれはお客様の企業がご自身で運用できる状態へ</b>。その土台づくりを支えます。2026年7月1日に開始した総務アウトソーシング『SIRIUS』は、日本の企業、そして貴社が「自社で運用できる」状態を築くためのパートナーであり続けます。</p>
   </div>
 </section>
 
@@ -492,10 +586,10 @@
 <section class="close">
   <div class="wrap">
     <div class="sec-lead"><span class="eyebrow">先行登録受付中</span></div>
-    <h2 class="big center">なぜ、毎月10社だけなのか。</h2>
-    <p class="prose col center">SIRIUSは、マニュアルのない状態から、PMがお客様と一緒に業務を一つずつ整理し、記録に残しながら立ち上げます。この<b>丁寧な立ち上げに手間をかける</b>ため、毎月お受けするのは10社まで。2026年7月1日の開始に向けて、先行登録を受け付けています。</p>
+    <h2 class="big center">毎月10社限定とする、理由。</h2>
+    <p class="prose col center">SIRIUSは、マニュアルのない状態から、PMがお客様とともに業務を一つずつ整理し、記録に残しながら導入を進めます。この<b>丁寧な導入に十分な時間を要する</b>ため、毎月お受けするのは10社までとしております。2026年7月1日のサービス開始後も、先行のご登録を承っております。</p>
     <div style="margin-top:26px;"><span class="scarce"><span class="dot"></span>毎月10社・先着順</span></div>
-    <div><a class="btn btn-primary" href="#register">先行登録する（無料・1分）</a></div>
+    <div><a class="btn btn-primary" href="#register">先行登録する（無料・約1分で完了）</a></div>
   </div>
 </section>
 
@@ -507,10 +601,10 @@
         <div class="ftitle">
           <div class="k">先行登録</div>
           <div class="t">先行登録（無料）</div>
-          <div class="s">毎月10社まで。ご登録いただいた方から、順にご案内します。この時点で、費用や契約は発生しません。</div>
+          <div class="s">毎月10社までとなります。ご登録いただいた方から順にご案内いたします。この時点で、費用や契約は発生いたしません。</div>
         </div>
         <div class="fg"><label for="email">メールアドレス<span class="req">必須</span></label><input type="email" id="email" name="email" autocomplete="email" required /></div>
-        <p class="opthint">以下は任意です。差し支えのない範囲でご記入ください（メールアドレスだけでも登録できます）。</p>
+        <p class="opthint">以下は任意です。差し支えのない範囲でご記入ください（メールアドレスのみでもご登録いただけます）。</p>
         <div class="fg"><label for="name">お名前（任意）</label><input type="text" id="name" name="name" autocomplete="name" placeholder="例：山田 太郎" /></div>
         <div class="fg"><label for="company">会社名（任意）</label><input type="text" id="company" name="company" autocomplete="organization" /></div>
         <div class="fg"><label for="phone">電話番号（任意）</label><input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="例：03-1234-5678" /></div>
@@ -534,12 +628,12 @@
         <div class="fg consent"><input type="checkbox" id="consent" name="consent" required /><label for="consent" style="font-weight:400;margin:0;">先行案内の受け取りに同意します。<span class="req">必須</span></label></div>
         <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none" />
         <button type="submit" class="submit">無料で先行登録する</button>
-        <p class="fine">メールアドレスだけでも登録できます（1分で完了）。その他は任意です。しつこい営業のご連絡はいたしません。いただいた情報は、ご案内以外の目的には利用いたしません。</p>
+        <p class="fine">メールアドレスのみでもご登録いただけます（約1分で完了）。その他の項目は任意です。過度な営業のご連絡はいたしません。いただいた情報は、ご案内以外の目的には利用いたしません。</p>
       </form>
       <div class="reg-done" id="regDone">
         <div class="ck">✓</div>
         <h3>先行登録が完了しました。</h3>
-        <p>ご登録ありがとうございます。毎月10社の枠から、順にご案内いたします。依頼したい業務が生じた際は、いつでもご相談ください。</p>
+        <p>ご登録ありがとうございます。毎月10社の枠から、順にご案内いたします。ご依頼をご希望の業務が生じた際は、いつでもご相談ください。</p>
       </div>
     </div>
   </div>
@@ -561,7 +655,7 @@
   </div>
 </footer>
 
-<div class="sticky-cta"><a href="#register">先行登録する（無料・1分）</a></div>
+<div class="sticky-cta"><a href="#register">先行登録する（無料・約1分で完了）</a></div>
 
 <script>
   /* 先行登録フォーム → Web3Forms（メール通知）。会社名・従業員数も送信メールに載る。 */
@@ -601,7 +695,7 @@
       "流入元":qp('utm_source')||document.referrer||"（直接/不明）"
     };
     const orig=submitBtn.textContent;
-    submitBtn.disabled=true; submitBtn.textContent='送信中…';
+    submitBtn.disabled=true; submitBtn.textContent='送信中';
     try{
       const res=await fetch(W3F_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(payload)});
       const out=await res.json().catch(()=>({}));
@@ -616,7 +710,7 @@
     done.scrollIntoView({behavior:'smooth',block:'center'});
   });
 
-  /* スクロールでフォーム欄をふわっと表示 */
+  /* スクロールでフォーム欄を表示 */
   const io=new IntersectionObserver((es)=>{es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:0.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
